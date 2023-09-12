@@ -1,5 +1,4 @@
 import React from 'react';
-import a from 'next/a';
 
 const Navbar = () => {
   return (
@@ -12,23 +11,23 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Cars</a></li>
         <li>
-          <a>Parent</a>
+          <a>Why Us?</a>
           <ul className="p-2">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
         </li>
-        <li><a>Item 3</a></li>
+        <li><a>Contact Us</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">Alliance Group Autobrokers</a>
+    <a className="btn btn-ghost normal-case text-xl text-accent">Alliance Group Autobrokers</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><a>Cars</a></li>
       <li tabIndex={0}>
         <details>
-          <summary>Parent</summary>
+          <summary>Why Us?</summary>
           <ul className="p-2">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
