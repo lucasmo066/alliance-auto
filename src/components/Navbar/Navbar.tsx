@@ -16,14 +16,14 @@ const Navbar = () => {
         <li>
           <a>Why Us?</a>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Testimonials</a></li>
+            <li><a>Our Values</a></li>
           </ul>
         </li>
         <li><a>Contact Us</a></li>
       </ul>
     </div>
-    <a href="" className="btn btn-ghost normal-case text-xl text-accent">Alliance Group Autobrokers</a>
+    <a href="/" className="btn btn-ghost normal-case text-xl text-accent">Alliance Group Autobrokers</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -32,8 +32,8 @@ const Navbar = () => {
         <details>
           <summary>Why Us?</summary>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Testimonials</a></li>
+            <li><a>Our Values</a></li>
           </ul>
         </details>
       </li>
