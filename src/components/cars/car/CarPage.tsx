@@ -10,9 +10,20 @@ export function CarPage({ car }: CarPageProps) {
       {car && (
         <div className="text-white  py-8">
           <div className="container mx-auto">
-            <h1 className="text-3xl font-bold text-primary mb-5">{car.year} {car.make?.title} {car.model}</h1>
-            <div className="border">
-                images here
+            <h1 className="text-3xl font-bold text-primary mb-5">
+              {car.year} {car.make?.title} {car.model}
+            </h1>
+            <div className="grid grid-cols-2 gap-4">
+              {/* Render car images */}
+              {car.images &&
+                car.images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image.url} // Assuming each image object has a 'url' property
+                    alt={`Image ${index + 1}`}
+                    className="w-full h-auto"
+                  />
+                ))}
             </div>
             {/* Other car details go here */}
             <div className="my-4">
