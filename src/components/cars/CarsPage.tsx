@@ -1,6 +1,6 @@
 import { CarsPagePayload, ShortCar } from "~/types";
 import CarsList from "./CarsList";
-import Navbar from "../Navbar/Navbar";
+
 
 export interface CarsPageProps {
   cars: CarsPagePayload | null;
@@ -9,6 +9,12 @@ export interface CarsPageProps {
 export function CarsPage({ cars }: CarsPageProps) {
   return (
     <>
+    <h1 className="text-center text-5xl text-primary font-bold mt-5 mb-10">Available Cars</h1>
+    <div className="">
+      <p>
+
+      </p>
+    </div>
       {/* Cars List */}
       <CarsList cars={cars as ShortCar[]} />
     </>

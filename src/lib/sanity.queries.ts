@@ -9,6 +9,9 @@ export const getAllCars = groq`
         make,
         model,
         year,
+        mileage,
+        cost,
+        sold,
         "mainImage": images[0],
         "slug": slug.current,
     }
@@ -22,6 +25,9 @@ export const carsBySlugQuery = groq`
     model,
     year,
     vin,
+    mileage,
+    cost,
+    sold,
     images,
     "slug": slug.current,
   }
