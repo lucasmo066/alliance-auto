@@ -13,7 +13,7 @@ export default async function IndexRoute({
   const preview = draftMode().isEnabled ? { token: readToken! } : undefined;
 
   const layout = (
-    <div className={`relative flex flex-col overflow-x-hidden `}>
+    <div className={`relative flex flex-col overflow-x-hidden`}>
       {preview && <PreviewBanner />}
       <Navbar />
       <div className={`flex-grow`}>{children}</div>

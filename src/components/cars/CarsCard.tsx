@@ -25,14 +25,14 @@ export default function CarsCard({ car }: CarsCardProps) {
         />
       </div>
       <div className="-mt-4 flex flex-col items-center justify-center">
-        <h6 className="text-xl font-bold tracking-tight text-black">
+        <h6 className="mt-5 text-xl font-bold tracking-tight text-black">
           {car.year} {car.name}
         </h6>
         <p className="font-normal text-gray-200">Mileage: {car.mileage} </p>
         <p className="font-bold text-green-400">Cost: ${car.cost}</p>
         <a href="">
   {isSold ? (
-    <button className="btn btn-neutral">Sold!</button>
+    <button className="btn btn-primary" disabled>Sold!</button>
   ) : (
     <button className="btn btn-primary">See Details!</button>
   )}
