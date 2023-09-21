@@ -69,12 +69,6 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      type: 'string',
-      name: 'color',
-      title: 'Color',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       type: 'number',
       name: 'previousOwners',
       title: 'Number of Previous Owners',
@@ -90,6 +84,16 @@ export default defineType({
           title: 'Material',
         }),
         // Add more interior detail fields as needed
+        defineField({
+          type: 'boolean',
+          name: 'sunroof',
+          title: 'Sunroof',
+        }),
+        defineField({
+          type: 'string',
+          name: 'seatingCapacity',
+          title: 'Seating Capacity',
+        }),
       ],
     }),
     defineField({
@@ -103,14 +107,19 @@ export default defineType({
           title: 'Condition',
         }),
         // Add more exterior detail fields as needed
+        defineField({
+          type: 'string',
+          name: 'paintColor',
+          title: 'Paint Color',
+        }),
+        defineField({
+          type: 'string',
+          name: 'tireCondition',
+          title: 'Tire Condition',
+        }),
       ],
     }),
 
-    defineField({
-      type: 'string',
-      name: 'emissionStatus',
-      title: 'Emission Status',
-    }),
      //images start
     defineField({
       name: 'images',
