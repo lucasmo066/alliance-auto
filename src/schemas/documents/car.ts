@@ -60,8 +60,58 @@ export default defineType({
       type: 'boolean',
       name: 'sold',
       title: 'Sold',
-      description: 'Check this box if the car is sold',
+      description: 'Check this box if the car has been sold',
     }),
+    defineField({
+      type: 'number',
+      name: 'doors',
+      title: 'Amount of Doors',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      type: 'string',
+      name: 'color',
+      title: 'Color',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      type: 'number',
+      name: 'previousOwners',
+      title: 'Number of Previous Owners',
+    }),
+    defineField({
+      type: 'object',
+      name: 'interiorDetails',
+      title: 'Interior Details',
+      fields: [
+        defineField({
+          type: 'string',
+          name: 'material',
+          title: 'Material',
+        }),
+        // Add more interior detail fields as needed
+      ],
+    }),
+    defineField({
+      type: 'object',
+      name: 'exteriorDetails',
+      title: 'Exterior Details',
+      fields: [
+        defineField({
+          type: 'string',
+          name: 'condition',
+          title: 'Condition',
+        }),
+        // Add more exterior detail fields as needed
+      ],
+    }),
+
+    defineField({
+      type: 'string',
+      name: 'emissionStatus',
+      title: 'Emission Status',
+    }),
+     //images start
     defineField({
       name: 'images',
       type: 'array',

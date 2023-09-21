@@ -1,4 +1,5 @@
 import { CarPayload } from "~/types";
+import CarsImageCarousel from "./CarsImageCarousel";
 
 export interface CarPageProps {
   car: CarPayload | null;
@@ -13,18 +14,7 @@ export function CarPage({ car }: CarPageProps) {
             <h1 className="text-3xl font-bold text-primary mb-5">
               {car.year} {car.make?.title} {car.model}
             </h1>
-            <div className="grid grid-cols-2 gap-4">
-              {/* Render car images */}
-              {car.images &&
-                car.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image.url} // Assuming each image object has a 'url' property
-                    alt={`Image ${index + 1}`}
-                    className="w-full h-auto"
-                  />
-                ))}
-            </div>
+           <CarsImageCarousel />
             {/* Other car details go here */}
             <div className="my-4">
               <h2 className="text-xl font-semibold">Car Details</h2>
