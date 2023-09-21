@@ -18,7 +18,6 @@ export default defineType({
       options: {
         source: 'name',
       },
-      validation: (rule) => rule.required(),
     }),
     defineField({
       type: 'make',
@@ -81,9 +80,8 @@ export default defineType({
         defineField({
           type: 'string',
           name: 'material',
-          title: 'Material',
+          title: 'Material of Seats',
         }),
-        // Add more interior detail fields as needed
         defineField({
           type: 'boolean',
           name: 'sunroof',
@@ -106,7 +104,6 @@ export default defineType({
           name: 'condition',
           title: 'Condition',
         }),
-        // Add more exterior detail fields as needed
         defineField({
           type: 'string',
           name: 'paintColor',
@@ -119,8 +116,6 @@ export default defineType({
         }),
       ],
     }),
-
-     //images start
     defineField({
       name: 'images',
       type: 'array',

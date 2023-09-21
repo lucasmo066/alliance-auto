@@ -6,6 +6,7 @@ export interface CarPageProps {
 }
 
 export function CarPage({ car }: CarPageProps) {
+  console.log(car.interiorDetails?.sunroof)
   return (
     <>
       {car && (
@@ -17,33 +18,35 @@ export function CarPage({ car }: CarPageProps) {
            <CarsImageCarousel />
             {/* Other car details go here */}
             <div className="my-4">
-              <h2 className="text-xl font-semibold">Car Details</h2>
+              <h2 className="text-xl text-accent font-semibold">Car Details</h2>
               <ul>
                 <li>Doors: {car.doors}</li>
-                <li>Color: {car.color}</li>
                 <li>Previous Owners: {car.previousOwners}</li>
                 <li>VIN: {car.vin}</li>
-                {/* Add more details as needed */}
               </ul>
             </div>
             <div className="my-4">
-              <h2 className="text-xl font-semibold">Interior Details</h2>
-              <p>{car.interiorDetails}</p>
+              <h2 className="text-xl text-accent  font-semibold">Interior Details</h2>
+              <p>Seat Material: {car.interiorDetails?.material}</p>
+              <p>Sunroof: {car.interiorDetails?.sunroof ? "Yes" : "No"}</p>
+               <p>Number of Seats: {car.interiorDetails?.seatingCapacity}</p>
             </div>
             <div className="my-4">
-              <h2 className="text-xl font-semibold">Exterior Details</h2>
-              <p>{car.exteriorDetails}</p>
+              <h2 className="text-xl text-accent  font-semibold">Exterior Details</h2>
+              <p>Condition of Exterior: {car.exteriorDetails?.condition}</p>
             </div>
-            <div className="my-4">
-              <h2 className="text-xl font-semibold">Emission Status</h2>
-              <p>{car.emissionStatus}</p>
+            <div className="border">
+              <button className="btn btn-primary text-white font-bold py-2 px-4rounded-half">
+                Set Appointment
+              </button>
+               {/* This button needs to be its own component, the component will copy the link to the clipboard and then shows a tag that read "link copied to clipboard"*/}
+              <button className="btn btn-outline text-primary font-bold py-2 px-4 rounded-half">
+                Share
+              </button>
             </div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-              Set an Appointment
-            </button>
           </div>
         </div>
       )}
     </>
-  );
+  )
 }

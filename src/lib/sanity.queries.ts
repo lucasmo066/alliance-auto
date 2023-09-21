@@ -28,6 +28,10 @@ export const carsBySlugQuery = groq`
     mileage,
     cost,
     sold,
+    doors,
+    previousOwners,
+    interiorDetails,
+    exteriorDetails,
     images,
     "slug": slug.current,
   }

@@ -17,7 +17,7 @@ export interface ShortCar {
   mileage?: number;
   cost?: number;
   mainImage?: Image;
-  sold?: boolean; // Add the 'sold' field
+  sold?: boolean; 
 }
 
 export interface CarsPagePayload {
@@ -33,7 +33,19 @@ export interface CarPayload {
   model?: string;
   year?: string;
   vin?: string;
-  cost?: number;    // Updated to 'number' type
-  mileage?: number; // Updated to 'number' type
+  cost?: number;    
+  mileage?: number; 
+  doors?: number;   
+  previousOwners?: number;
+  interiorDetails?: {
+    material?: string;
+    sunroof?: boolean;
+    seatingCapacity?: string;
+  };
+  exteriorDetails?: {
+    condition?: string;
+    paintColor?: string;
+    tireCondition?: string; 
+  };
   images?: Image[];
 }

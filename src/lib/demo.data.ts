@@ -1,8 +1,8 @@
 // All the demo data that used as fallbacks when there's nothing in the dataset yet
 
-export const title = 'Personal website'
+export const title = 'Alliance Group Autobrokers'
 
-export const demoLocations = [
+export const demoCars = [
     {
       name: 'MedFusion Main Hospital',
       slug: 'medfusion-main-hospital',
