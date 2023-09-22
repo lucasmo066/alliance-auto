@@ -27,6 +27,7 @@ export const carsBySlugQuery = groq`
     vin,
     mileage,
     cost,
+    emissionStatus,
     sold,
     doors,
     previousOwners,

@@ -35,7 +35,8 @@ export interface CarPayload {
   vin?: string;
   cost?: number;    
   mileage?: number; 
-  doors?: number;   
+  doors?: number;  
+  emissionStatus?: boolean; 
   previousOwners?: number;
   interiorDetails?: {
     material?: string;

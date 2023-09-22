@@ -6,17 +6,16 @@ export interface CarPageProps {
 }
 
 export function CarPage({ car }: CarPageProps) {
-  console.log(car.interiorDetails?.sunroof)
+  
   return (
     <>
       {car && (
-        <div className="text-white  py-8">
+        <div className="text-white py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-primary mb-5">
               {car.year} {car.make?.title} {car.model}
             </h1>
-           <CarsImageCarousel />
-            {/* Other car details go here */}
+            <CarsImageCarousel images={car.images} car={car} />
             <div className="my-4">
               <h2 className="text-xl text-accent font-semibold">Car Details</h2>
               <ul>

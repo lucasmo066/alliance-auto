@@ -9,7 +9,7 @@ const Hero = () => {
       <h1 className="mb-5 text-5xl font-bold text-accent">Discover Unmatched Quality in Used Cars at Marietta's Trusted Dealership</h1>
       <p className="mb-5 text-accent-content">Welcome to Marietta's premier destination for exceptional used cars. With 15 years of unwavering commitment to great value, top-notch mechanics, transparent selling practices, and a reputation built on trust, we are your trusted choice for finding the perfect vehicle. Explore our vast inventory and experience top-quality customer service like never before.</p>
         <div className=''>
-          <a href="/cars"><button className="btn btn-primary px-10">See Available Cars</button></a>
+          <a href="/cars"><button className="btn bg-purple-500 text-white px-10">See Available Cars</button></a>
       </div>
     </div>
   </div>

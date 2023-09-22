@@ -73,6 +73,11 @@ export default defineType({
       title: 'Number of Previous Owners',
     }),
     defineField({
+      type: 'boolean',
+      name: 'emissionStatus',
+      title: 'Emission Status',
+    }),
+    defineField({
       type: 'object',
       name: 'interiorDetails',
       title: 'Interior Details',
