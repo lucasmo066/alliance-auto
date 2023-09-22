@@ -1,8 +1,8 @@
-import type { Image } from 'sanity';
+import type { Image } from "sanity";
 
 export interface Make {
   _id?: string;
-  _type?: 'make';
+  _type?: "make";
   title?: string;
 }
 
@@ -17,7 +17,7 @@ export interface ShortCar {
   mileage?: number;
   cost?: number;
   mainImage?: Image;
-  sold?: boolean; 
+  sold?: boolean;
 }
 
 export interface CarsPagePayload {
@@ -26,17 +26,17 @@ export interface CarsPagePayload {
 
 export interface CarPayload {
   _id?: string;
-  _type?: 'car';
+  _type?: "car";
   name?: string;
   slug?: string;
   make?: Make;
   model?: string;
   year?: string;
   vin?: string;
-  cost?: number;    
-  mileage?: number; 
-  doors?: number;  
-  emissionStatus?: boolean; 
+  cost?: number;
+  mileage?: number;
+  doors?: number;
+  emissionStatus?: boolean;
   previousOwners?: number;
   interiorDetails?: {
     material?: string;
@@ -46,7 +46,7 @@ export interface CarPayload {
   exteriorDetails?: {
     condition?: string;
     paintColor?: string;
-    tireCondition?: string; 
+    tireCondition?: string;
   };
   images?: Image[];
 }

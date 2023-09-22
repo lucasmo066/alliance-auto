@@ -19,7 +19,7 @@ export const singletonPlugin = (types: string[]) => {
       newDocumentOptions: (prev, { creationContext }) => {
         if (creationContext.type === "global") {
           return prev.filter(
-            (templateItem) => !types.includes(templateItem.templateId)
+            (templateItem) => !types.includes(templateItem.templateId),
           );
         }
 
@@ -38,7 +38,7 @@ export const singletonPlugin = (types: string[]) => {
 };
 
 export const pageStructure = (
-  typeDefArray: DocumentDefinition[]
+  typeDefArray: DocumentDefinition[],
 ): StructureResolver => {
   return (S) => {
     // Goes through all of the singletons that were provided and translates them into something the
@@ -70,7 +70,7 @@ export const pageStructure = (
                       .title("Preview"),
                   ]
                 : []),
-            ])
+            ]),
         );
     });
 
@@ -78,7 +78,7 @@ export const pageStructure = (
     const dynamicDocuments = ["car"];
 
     const dynamic = S.documentTypeListItems().filter((listItem) =>
-      dynamicDocuments.includes(listItem.getId() as string)
+      dynamicDocuments.includes(listItem.getId() as string),
     );
 
     return S.list()
@@ -87,7 +87,7 @@ export const pageStructure = (
         S.listItem()
           .title("Manage Content")
           .child(
-            S.list().title("Mange Content").items(dynamic).showIcons(true)
+            S.list().title("Mange Content").items(dynamic).showIcons(true),
           ),
       ] as any);
   };

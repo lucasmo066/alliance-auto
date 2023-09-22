@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import { urlForImage } from "~/lib/sanity.image";
 import { ShortCar } from "~/types/index";
@@ -26,7 +26,7 @@ export default function CarsCard({ car }: CarsCardProps) {
       className={`flex flex-col items-center justify-start bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg shadow-xs p-5 lg:p-10 h-full ${
         isSold ? "disabled" : ""
       }`}
-      onClick={handleCardClick} 
+      onClick={handleCardClick}
     >
       <div className="flex items-center justify-center mb-4 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600">
         <Image

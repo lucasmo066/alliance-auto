@@ -6,7 +6,6 @@ export interface CarPageProps {
 }
 
 export function CarPage({ car }: CarPageProps) {
-  
   return (
     <>
       {car && (
@@ -15,7 +14,7 @@ export function CarPage({ car }: CarPageProps) {
             <h1 className="text-3xl font-bold text-primary mb-5">
               {car.year} {car.make?.title} {car.model}
             </h1>
-            <CarsImageCarousel images={car.images} car={car} />
+            <CarsImageCarousel car={car} />
             <div className="my-4">
               <h2 className="text-xl text-accent font-semibold">Car Details</h2>
               <ul>
@@ -25,20 +24,24 @@ export function CarPage({ car }: CarPageProps) {
               </ul>
             </div>
             <div className="my-4">
-              <h2 className="text-xl text-accent  font-semibold">Interior Details</h2>
+              <h2 className="text-xl text-accent  font-semibold">
+                Interior Details
+              </h2>
               <p>Seat Material: {car.interiorDetails?.material}</p>
               <p>Sunroof: {car.interiorDetails?.sunroof ? "Yes" : "No"}</p>
-               <p>Number of Seats: {car.interiorDetails?.seatingCapacity}</p>
+              <p>Number of Seats: {car.interiorDetails?.seatingCapacity}</p>
             </div>
             <div className="my-4">
-              <h2 className="text-xl text-accent  font-semibold">Exterior Details</h2>
+              <h2 className="text-xl text-accent  font-semibold">
+                Exterior Details
+              </h2>
               <p>Condition of Exterior: {car.exteriorDetails?.condition}</p>
             </div>
             <div className="border">
               <button className="btn btn-primary text-white font-bold py-2 px-4rounded-half">
                 Set Appointment
               </button>
-               {/* This button needs to be its own component, the component will copy the link to the clipboard and then shows a tag that read "link copied to clipboard"*/}
+              {/* This button needs to be its own component, the component will copy the link to the clipboard and then shows a tag that read "link copied to clipboard"*/}
               <button className="btn btn-outline text-primary font-bold py-2 px-4 rounded-half">
                 Share
               </button>
@@ -47,5 +50,5 @@ export function CarPage({ car }: CarPageProps) {
         </div>
       )}
     </>
-  )
+  );
 }
