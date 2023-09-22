@@ -1,5 +1,7 @@
 import { CarPayload } from "~/types";
-import CarsImageCarousel from "./CarsImageCarousel";
+
+import { urlForImage } from "~/lib/sanity.image";
+import Image from 'next/image';
 
 export interface CarPageProps {
   car: CarPayload | null;
@@ -8,13 +10,43 @@ export interface CarPageProps {
 export function CarPage({ car }: CarPageProps) {
   return (
     <>
-      {car && (
+      {car && car.images && car.images.length > 0 && (
         <div className="text-white py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-primary mb-5">
               {car.year} {car.make?.title} {car.model}
             </h1>
-            <CarsImageCarousel car={car} />
+            <div className="carousel w-full">
+              {car.images.map((image, index) => (
+                <div
+                  key={index}
+                  id={`slide${index + 1}`}
+                  className="carousel-item relative w-full"
+                >
+                  <Image
+                    src={urlForImage(image).url()!}
+                    alt={car.name}
+                    width={500}
+                    height={200}
+                    className="w-full"
+                  />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a
+                      href={`#slide${index === 0 ? car.images.length : index}`}
+                      className="btn btn-circle"
+                    >
+                      ❮
+                    </a>
+                    <a
+                      href={`#slide${index === car.images.length - 1 ? 1 : index + 2}`}
+                      className="btn btn-circle"
+                    >
+                      ❯
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
             <div className="my-4">
               <h2 className="text-xl text-accent font-semibold">Car Details</h2>
               <ul>
