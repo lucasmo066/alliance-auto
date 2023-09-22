@@ -50,6 +50,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      type: "string",
+      name: "transmission",
+      title: "Transmission",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       type: "number", // Change to 'number' type for cost
       name: "cost",
       title: "Cost",

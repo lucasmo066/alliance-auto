@@ -16,6 +16,7 @@ export interface ShortCar {
   vin?: string;
   mileage?: number;
   cost?: number;
+  transmission?: string;
   mainImage?: Image;
   sold?: boolean;
 }
@@ -35,6 +36,7 @@ export interface CarPayload {
   vin?: string;
   cost?: number;
   mileage?: number;
+  transmission?: string;
   doors?: number;
   emissionStatus?: boolean;
   previousOwners?: number;
