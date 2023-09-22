@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import SetAppointmentButton from "~/components/buttons/SetAppointmentButton";
 
 const Navbar = () => {
   return (
@@ -73,12 +74,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a
-          href="https://www.calendly.com/alliancegroupauto/carappt"
-          className="btn btn-accent"
-        >
-          Set an Appointment
-        </a>
+      <SetAppointmentButton href="https://www.calendly.com/alliancegroupauto/carappt" />
       </div>
     </div>
   );

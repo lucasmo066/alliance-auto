@@ -40,8 +40,8 @@ export default defineType({
       type: "string",
       name: "vin",
       title: "VIN",
-      // max length of 17
-      validation: (rule) => rule.required().max(17),
+      // must be length of 17
+      validation: (rule) => rule.required().length(17),
     }),
     defineField({
       type: "number", // Change to 'number' type for mileage

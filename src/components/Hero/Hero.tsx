@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
           <div className="">
             <a href="/cars">
-              <button className="btn bg-purple-500 text-white px-10">
+              <button className="btn bg-purple-500 hover:bg-purple-900 text-white px-10">
                 See Available Cars
               </button>
             </a>

@@ -38,11 +38,16 @@ export default function CarsCard({ car }: CarsCardProps) {
         />
       </div>
       <div className="-mt-4 flex flex-col items-center justify-center">
-        <h6 className="mt-5 text-xl font-bold tracking-tight text-black">
+        <h2 className="mt-5 text-xl font-bold tracking-tight text-black">
           {car.year} {car.name}
-        </h6>
-        <p className="font-normal text-gray-200">Mileage: {car.mileage} </p>
-        <p className="font-bold text-green-400">Cost: ${car.cost}</p>
+        </h2>
+        <div className="badge badge-outline">{car.transmission}</div>
+        <p className="font-normal text-gray-200">
+          {car.mileage.toLocaleString()} miles
+        </p>
+        <p className="font-bold text-green-500">
+          Cost: ${car.cost.toLocaleString()}
+        </p>
         <a href="">
           {isSold ? (
             <button className="btn bg-purple-500" disabled>

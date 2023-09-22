@@ -1,6 +1,10 @@
 import { CarPayload } from "~/types";
 import { urlForImage } from "~/lib/sanity.image";
-import Image from 'next/image';
+import Image from "next/image";
+import CopyToClipboardButton from "~/components/buttons/CopyToClipboardButton";
+import SetAppointmentButton from "~/components/buttons/SetAppointmentButton";
+import CarfaxButton from "~/components/buttons/CarfaxButton";
+
 
 export interface CarPageProps {
   car: CarPayload | null;
@@ -10,7 +14,7 @@ export function CarPage({ car }: CarPageProps) {
   return (
     <>
       {car && car.images && car.images.length > 0 && (
-        <div className="text-white text-center py-8">
+        <div className="text-white py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-purple-500 mb-5">
               {car.year} {car.make?.title} {car.model}
@@ -37,7 +41,9 @@ export function CarPage({ car }: CarPageProps) {
                       ❮
                     </a>
                     <a
-                      href={`#slide${index === car.images.length - 1 ? 1 : index + 2}`}
+                      href={`#slide${
+                        index === car.images.length - 1 ? 1 : index + 2
+                      }`}
                       className="btn btn-circle"
                     >
                       ❯
@@ -46,38 +52,121 @@ export function CarPage({ car }: CarPageProps) {
                 </div>
               ))}
             </div>
-            <div className="my-4">
-              <h2 className="text-xl text-accent font-semibold">Car Details</h2>
-              <ul>
-                <li>Doors: {car.doors}</li>
-                <li>Previous Owners: {car.previousOwners}</li>
-                <li>VIN: {car.vin}</li>
-              </ul>
-            </div>
-            <div className="my-4">
-              <h2 className="text-xl text-accent font-semibold">
-                Interior Details
+            
+              <h2 className="text-2xl text-center text-accent font-semibold">
+                Car Details
               </h2>
-              <p>Seat Material: {car.interiorDetails?.material}</p>
-              <p>Sunroof: {car.interiorDetails?.sunroof ? "Yes" : "No"}</p>
-              <p>Number of Seats: {car.interiorDetails?.seatingCapacity}</p>
+              
+              <div className="border overflow-x-auto">
+                <table className="table">
+                  <tbody>
+                    <tr>
+                      <th>Doors</th>
+                      <td className="align-top">{car.doors}</td>
+                    </tr>
+                    <tr>
+                      <th>Previous Owners</th>
+                      <td className="align-top">{car.previousOwners}</td>
+                    </tr>
+                    <tr>
+                      <th>VIN</th>
+                      <td className="align-top">
+                        {car.vin}{" "}
+                        <CarfaxButton vin={car.vin} />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Transmission Type</th>
+                      <td className="align-top">{car.transmission}</td>
+                    </tr>
+                    <tr>
+                      <th>Mileage</th>
+                      <td className="align-top">
+                        {car.mileage.toLocaleString()} miles
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+           
+
+            <br />
+
+            <h2 className="text-2xl text-accent font-semibold">
+              Interior Details
+            </h2>
+
+            <div className="border overflow-x-auto">
+              <table className="table">
+                <tbody>
+                  <tr>
+                    <td>Seat Material</td>
+                    <td className="align-top">{car.interiorDetails?.material}</td>
+                  </tr>
+                  <tr>
+                    <td>Sunroof</td>
+                    <td className="align-top">
+                      {car.interiorDetails?.sunroof ? "Yes" : "No"}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Number of Seats</td>
+                    <td className="align-top">{car.interiorDetails?.seatingCapacity}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div className="my-4">
-              <h2 className="text-xl text-accent font-semibold">
+
+            <br />
+              <h2 className="text-2xl text-accent font-semibold">
                 Exterior Details
               </h2>
-              <p>Condition of Exterior: {car.exteriorDetails?.condition}</p>
-              <p>Paint Color: {car.exteriorDetails?.paintColor}</p>
-              <p>Tire Condition: {car.exteriorDetails?.tireCondition}</p>
+              <div className="border overflow-x-auto">
+                <table className="table">
+                  <tbody>
+                    <tr>
+                      <th>Condition of Exterior</th>
+                      <td className="align-top">{car.exteriorDetails?.condition}</td>
+                    </tr>
+                    <tr>
+                      <th>Paint Color</th>
+                      <td className="align-top">{car.exteriorDetails?.paintColor}</td>
+                    </tr>
+                    <tr>
+                      <th>Tire Condition</th>
+                      <td className="align-top">{car.exteriorDetails?.tireCondition}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+           
+            <div className="my-4">
+              <div className="divider"></div>
+              <h2 className="text-2xl text-accent font-semibold">
+                Cost Details
+              </h2>
+              <div className="border border-gray-300 py-4">
+                <p className="text-lg font-semibold">
+                  Price: ${car.cost.toLocaleString()}
+                </p>
+                <p className="text-lg font-semibold">
+                  Dealer Fee: ${(car.cost * 0.05 ).toLocaleString()}
+                </p>
+                <p className="text-lg font-semibold">
+                  Tag/Title: ${(car.cost * 0.1).toLocaleString()}
+                </p>
+                <p className="text-lg font-semibold">
+                  Tax (7%): ${(car.cost * 0.07).toLocaleString()}
+                </p>
+                <p className="text-xl font-semibold text-green-500">
+                  Total Cost: ${(car.cost * 1.13).toLocaleString()}
+                </p>
+              </div>
             </div>
-            <div className="">
-              <button className="btn bg-purple-500 text-white font-bold py-2 px-4 mx-2 rounded-half">
-                Set Appointment
-              </button>
-              {/* This button needs to be its own component, the component will copy the link to the clipboard and then shows a tag that read "link copied to clipboard"*/}
-              <button className="btn btn-outline text-purple-500 font-bold py-2 px-4 rounded-half">
-                Share
-              </button>
+
+            <div className="text-center space-x-4">
+            <SetAppointmentButton href="https://www.calendly.com/alliancegroupauto/carappt" />
+              <CopyToClipboardButton />
             </div>
           </div>
         </div>
