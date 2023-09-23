@@ -24,13 +24,11 @@ const Hero = () => {
             Explore our vast inventory and experience top-quality customer
             service like never before.
           </p>
-          <div className="">
-            <a href="/cars">
-              <button className="btn bg-accent hover:bg-red-400 text-white px-10">
-                See Available Cars
-              </button>
-            </a>
-          </div>
+          <a href="/cars">
+            <button className="btn bg-accent hover:bg-red-400 text-white px-10">
+              See Available Cars
+            </button>
+          </a>
         </div>
       </div>
     </div>

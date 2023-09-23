@@ -1,5 +1,6 @@
-'use client'
-import React from 'react';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
 interface CarfaxButtonProps {
   vin: string;
@@ -12,7 +13,13 @@ const CarfaxButton: React.FC<CarfaxButtonProps> = ({ vin }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <button className="btn btn-outline text-secondary hover:bg-blue-300 mx-2">Carfax</button>
+      <motion.button
+        whileHover={{ scale: 1.11 }}
+        whileTap={{ scale: 1.11 }}
+        className="btn btn-outline text-secondary hover:bg-blue-300 mx-2"
+      >
+        Carfax
+      </motion.button>
     </a>
   );
 };

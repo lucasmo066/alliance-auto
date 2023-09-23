@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 interface CopyToClipboardButtonProps {}
 
@@ -31,12 +32,14 @@ const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = () => {
   };
 
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       className="btn btn-outline text-primary hover:bg-blue-400 font-bold py-2 px-4 rounded-half"
       onClick={handleCopyClick}
     >
       {copied ? "Link Copied to Clipboard" : "Share"}
-    </button>
+    </motion.button>
   );
 };
 

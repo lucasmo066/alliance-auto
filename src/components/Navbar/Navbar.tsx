@@ -74,7 +74,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-      <SetAppointmentButton href="https://www.calendly.com/alliancegroupauto/carappt" />
+        <SetAppointmentButton href="https://www.calendly.com/alliancegroupauto/carappt" />
       </div>
     </div>
   );
