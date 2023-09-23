@@ -1,9 +1,11 @@
 import { CarPayload } from "~/types";
 import { urlForImage } from "~/lib/sanity.image";
 import Image from "next/image";
+import ImageCarousel from "./ImageCarousel";
 import CopyToClipboardButton from "~/components/buttons/CopyToClipboardButton";
 import SetAppointmentButton from "~/components/buttons/SetAppointmentButton";
 import CarfaxButton from "~/components/buttons/CarfaxButton";
+import Breadcrumb from "~/components/Breadcrumbs";
 
 
 export interface CarPageProps {
@@ -14,44 +16,17 @@ export function CarPage({ car }: CarPageProps) {
   return (
     <>
       {car && car.images && car.images.length > 0 && (
-        <div className="text-white py-8">
-          <div className="container mx-auto">
-            <h1 className="text-3xl font-bold text-purple-500 mb-5">
+        <div className="text-white">
+          <Breadcrumb
+            crumbs={[
+              { label: "Cars", href: "/cars" },
+              { label: `${car.year} ${car.make?.title} ${car.model}`, href: null},
+            ]} />
+          <div className="container mx-auto py-8">
+            <h1 className="text-3xl font-bold text-white text-center mb-5">
               {car.year} {car.make?.title} {car.model}
             </h1>
-            <div className="carousel w-full">
-              {car.images.map((image, index) => (
-                <div
-                  key={index}
-                  id={`slide${index + 1}`}
-                  className="carousel-item relative w-full"
-                >
-                  <Image
-                    src={urlForImage(image).url()!}
-                    alt={car.name}
-                    width={500}
-                    height={200}
-                    className="w-full"
-                  />
-                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a
-                      href={`#slide${index === 0 ? car.images.length : index}`}
-                      className="btn btn-circle"
-                    >
-                      ❮
-                    </a>
-                    <a
-                      href={`#slide${
-                        index === car.images.length - 1 ? 1 : index + 2
-                      }`}
-                      className="btn btn-circle"
-                    >
-                      ❯
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <ImageCarousel images={car.images.map((image) => urlForImage(image).url()!)} />
             
               <h2 className="text-2xl text-center text-accent font-semibold">
                 Car Details
@@ -140,7 +115,7 @@ export function CarPage({ car }: CarPageProps) {
                 </table>
               </div>
            
-            <div className="my-4">
+            
               <div className="divider"></div>
               <h2 className="text-2xl text-accent font-semibold">
                 Cost Details
@@ -169,7 +144,6 @@ export function CarPage({ car }: CarPageProps) {
               <CopyToClipboardButton />
             </div>
           </div>
-        </div>
       )}
     </>
   );

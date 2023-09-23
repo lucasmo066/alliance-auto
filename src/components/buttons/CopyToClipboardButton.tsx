@@ -32,7 +32,7 @@ const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = () => {
 
   return (
     <button
-      className="btn btn-outline text-purple-500 font-bold py-2 px-4 rounded-half"
+      className="btn btn-outline text-primary hover:bg-blue-400 font-bold py-2 px-4 rounded-half"
       onClick={handleCopyClick}
     >
       {copied ? "Link Copied to Clipboard" : "Share"}

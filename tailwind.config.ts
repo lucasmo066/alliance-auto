@@ -8,10 +8,43 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {},
+      colors: {
+        primary: "#1d4ed8",
+        secondary: "#93c5fd",
+        accent: "#f43f5e",
+        neutral: "#23282f",
+        "base-100": "#111827",
+        info: "#dbeafe",
+        success: "#10b981",
+        warning: "#facc15",
+        error: "#991b1b",
+      },
     },
     daisyui: {
-      themes: ["retro", "garden"],
+      themes: [
+        {
+          mytheme: {
+          
+ "primary": "#1d4ed8",
+          
+ "secondary": "#93c5fd",
+          
+ "accent": "#f43f5e",
+          
+ "neutral": "#23282f",
+          
+ "base-100": "#111827",
+          
+ "info": "#dbeafe",
+          
+ "success": "#10b981",
+          
+ "warning": "#facc15",
+          
+ "error": "#991b1b",
+          },
+        },
+      ],
     },
   },
   plugins: [require("daisyui")],

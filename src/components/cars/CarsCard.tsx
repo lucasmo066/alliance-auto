@@ -23,7 +23,7 @@ export default function CarsCard({ car }: CarsCardProps) {
 
   return (
     <div
-      className={`flex flex-col items-center justify-start bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg shadow-xs p-5 lg:p-10 h-full ${
+      className={`flex flex-col items-center justify-start bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg shadow-xl p-5 lg:p-10 h-full ${
         isSold ? "disabled" : ""
       }`}
       onClick={handleCardClick}
@@ -34,27 +34,27 @@ export default function CarsCard({ car }: CarsCardProps) {
           alt={car.name}
           width={500}
           height={500}
-          className="rounded-full"
+          className="rounded"
         />
       </div>
       <div className="-mt-4 flex flex-col items-center justify-center">
-        <h2 className="mt-5 text-xl font-bold tracking-tight text-black">
+        <h2 className="mt-5 text-3xl font-bold tracking-tight text-white">
           {car.year} {car.name}
         </h2>
-        <div className="badge badge-outline">{car.transmission}</div>
-        <p className="font-normal text-gray-200">
+        <div className="mb-3 mt-1 badge badge-lg badge-outline">{car.transmission}</div>
+        <p className="text-lg text-white">
           {car.mileage.toLocaleString()} miles
         </p>
-        <p className="font-bold text-green-500">
+        <p className="text-2xl font-bold text-success">
           Cost: ${car.cost.toLocaleString()}
         </p>
         <a href="">
           {isSold ? (
-            <button className="btn bg-purple-500" disabled>
+            <button className="btn bg-white-500" disabled>
               Sold!
             </button>
           ) : (
-            <button className="btn bg-purple-500 hover:bg-purple-900 text-white shadow-xl">
+            <button className="btn bg-accent hover:bg-red-400 text-white">
               See Details!
             </button>
           )}

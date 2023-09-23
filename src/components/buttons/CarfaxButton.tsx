@@ -12,7 +12,7 @@ const CarfaxButton: React.FC<CarfaxButtonProps> = ({ vin }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <button className="btn btn-outline mx-2">Carfax</button>
+      <button className="btn btn-outline text-secondary hover:bg-blue-300 mx-2">Carfax</button>
     </a>
   );
 };

@@ -12,11 +12,11 @@ const Hero = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold text-accent">
+          <h1 className="mb-5 text-5xl font-bold text-secondary">
             Discover Unmatched Quality in Used Cars at Marietta's Trusted
             Dealership
           </h1>
-          <p className="mb-5 text-accent-content">
+          <p className="mb-5 text-white">
             Welcome to Marietta's premier destination for exceptional used cars.
             With 15 years of unwavering commitment to great value, top-notch
             mechanics, transparent selling practices, and a reputation built on
@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
           <div className="">
             <a href="/cars">
-              <button className="btn bg-purple-500 hover:bg-purple-900 text-white px-10">
+              <button className="btn bg-accent hover:bg-red-400 text-white px-10">
                 See Available Cars
               </button>
             </a>
