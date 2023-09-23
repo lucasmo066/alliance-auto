@@ -28,11 +28,11 @@ export function CarPage({ car }: CarPageProps) {
             </h1>
             <ImageCarousel images={car.images.map((image) => urlForImage(image).url()!)} />
             
-              <h2 className="text-2xl text-center text-accent font-semibold">
+              <h2 className="mt-8 text-2xl text-center text-accent font-semibold">
                 Car Details
               </h2>
               
-              <div className="border overflow-x-auto">
+              <div className="overflow-x-auto">
                 <table className="table">
                   <tbody>
                     <tr>
@@ -60,18 +60,20 @@ export function CarPage({ car }: CarPageProps) {
                         {car.mileage.toLocaleString()} miles
                       </td>
                     </tr>
+                    <tr>
+                      <th>Emission Status</th>
+                      <td className="align-top">{car.emissionStatus ? "Passed" : "Awaiting Test"}</td>
+                    </tr>
+                  
                   </tbody>
                 </table>
               </div>
-           
 
-            <br />
-
-            <h2 className="text-2xl text-accent font-semibold">
+            <h2 className="mt-8 text-2xl text-accent text-center font-semibold">
               Interior Details
             </h2>
 
-            <div className="border overflow-x-auto">
+            <div className="overflow-x-auto">
               <table className="table">
                 <tbody>
                   <tr>
@@ -92,11 +94,10 @@ export function CarPage({ car }: CarPageProps) {
               </table>
             </div>
 
-            <br />
-              <h2 className="text-2xl text-accent font-semibold">
+              <h2 className="mt-8 text-2xl text-accent text-center  font-semibold">
                 Exterior Details
               </h2>
-              <div className="border overflow-x-auto">
+              <div className="overflow-x-auto">
                 <table className="table">
                   <tbody>
                     <tr>
@@ -117,10 +118,10 @@ export function CarPage({ car }: CarPageProps) {
            
             
               <div className="divider"></div>
-              <h2 className="text-2xl text-accent font-semibold">
+              <h2 className="text-2xl text-accent text-center font-semibold">
                 Cost Details
               </h2>
-              <div className="border border-gray-300 py-4">
+              <div className="py-4">
                 <p className="text-lg font-semibold">
                   Price: ${car.cost.toLocaleString()}
                 </p>
@@ -139,7 +140,7 @@ export function CarPage({ car }: CarPageProps) {
               </div>
             </div>
 
-            <div className="text-center space-x-4">
+            <div className="text-center space-x-4 mb-10">
             <SetAppointmentButton href="https://www.calendly.com/alliancegroupauto/carappt" />
               <CopyToClipboardButton />
             </div>
