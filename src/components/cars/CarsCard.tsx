@@ -6,7 +6,6 @@ import { urlForImage } from "~/lib/sanity.image";
 import { ShortCar } from "~/types/index";
 import { motion } from "framer-motion";
 
-
 interface CarsCardProps {
   car: ShortCar;
 }
@@ -55,23 +54,20 @@ export default function CarsCard({ car }: CarsCardProps) {
           Cost: ${car.cost.toLocaleString()}
         </p>
         <a>
-        {isSold ? (
-          <motion.button
-            className="btn bg-white-500 my-5 px-10"
-            disabled
-          >
-            Sold!
-          </motion.button>
-        ) : (
-          <motion.button
-            className="btn bg-accent hover:bg-red-400 text-white my-5 px-10"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            See Details!
-          </motion.button>
-        )}
-      </a>
+          {isSold ? (
+            <motion.button className="btn bg-white-500 my-5 px-10" disabled>
+              Sold!
+            </motion.button>
+          ) : (
+            <motion.button
+              className="btn bg-accent hover:bg-red-400 text-white my-5 px-10"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              See Details!
+            </motion.button>
+          )}
+        </a>
       </div>
     </div>
   );

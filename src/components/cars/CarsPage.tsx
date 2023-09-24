@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { CarsPagePayload, ShortCar } from "~/types";
 import CarsList from "./CarsList";
@@ -13,7 +13,11 @@ export function CarsPage({ cars }: CarsPageProps) {
   return (
     <>
       {/* Breadcrumbs */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <Breadcrumb crumbs={[{ label: "Cars", href: null }]} />
       </motion.div>
       <motion.h1
@@ -31,7 +35,11 @@ export function CarsPage({ cars }: CarsPageProps) {
         exit={{ width: 0 }}
       ></motion.div>
       {/* Cars List */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <CarsList cars={cars as ShortCar[]} />
       </motion.div>
     </>

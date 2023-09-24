@@ -1,6 +1,24 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import SetAppointmentButton from "~/components/buttons/SetAppointmentButton";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const ulVariants = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.0, // Adjust the animation duration as needed
+    },
+  },
+};
 
 const Navbar = () => {
   return (
@@ -23,7 +41,10 @@ const Navbar = () => {
               />
             </svg>
           </label>
-          <ul
+          <motion.ul
+            variants={ulVariants}
+            initial="hidden"
+            animate="visible"
             tabIndex={0}
             className="menu menu-sm dropdown-content text-white mt-3 z-[1] p-2 bg-neutral shadow rounded-box w-52"
           >
@@ -44,14 +65,25 @@ const Navbar = () => {
             <li>
               <a>Contact Us</a>
             </li>
-          </ul>
+          </motion.ul>
         </div>
-        <a href="/" className="btn btn-ghost normal-case text-xl text-primary">
-          Alliance Group Autobrokers
+        <a href="/">
+          <Image
+            src="/alliance.png"
+            alt="Alliance Group Auto Logo"
+            width={200}
+            height={50}
+          />
         </a>
       </div>
+
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal text-white px-1">
+        <motion.ul
+          variants={ulVariants}
+          initial="hidden"
+          animate="visible"
+          className="menu menu-horizontal text-white px-1"
+        >
           <li>
             <a href="/cars">Cars</a>
           </li>
@@ -71,7 +103,7 @@ const Navbar = () => {
           <li>
             <a>Contact Us</a>
           </li>
-        </ul>
+        </motion.ul>
       </div>
       <div className="navbar-end">
         <SetAppointmentButton href="https://www.calendly.com/alliancegroupauto/carappt" />

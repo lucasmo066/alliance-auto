@@ -62,7 +62,7 @@ export function CarPage({ car }: CarPageProps) {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="table" 
+                  className="table"
                 >
                   <tbody>
                     <tr>
@@ -99,85 +99,73 @@ export function CarPage({ car }: CarPageProps) {
                 </motion.table>
               </div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="mt-8 text-2xl text-center text-accent font-semibold"
-            >
-              Interior Details
-            </motion.h2>
-
-            <div className="overflow-x-auto">
-              <motion.table
+              <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.0 }}
-                className="table"
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="mt-8 text-2xl text-center text-accent font-semibold"
               >
-                <tbody>
-                  <tr>
-                    <td>Seat Material:</td>
-                    <td>
-                      {car.interiorDetails?.material}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Sunroof:</td>
-                    <td>
-                      {car.interiorDetails?.sunroof ? "Yes" : "No"}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Number of Seats:</td>
-                    <td>
-                      {car.interiorDetails?.seatingCapacity}
-                    </td>
-                  </tr>
-                </tbody>
-              </motion.table>
-            </div>
+                Interior Details
+              </motion.h2>
 
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-              className="mt-8 text-2xl text-center text-accent font-semibold"
-            >
-              Exterior Details
-            </motion.h2>
+              <div className="overflow-x-auto">
+                <motion.table
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.0 }}
+                  className="table"
+                >
+                  <tbody>
+                    <tr>
+                      <td>Seat Material:</td>
+                      <td>{car.interiorDetails?.material}</td>
+                    </tr>
+                    <tr>
+                      <td>Sunroof:</td>
+                      <td>{car.interiorDetails?.sunroof ? "Yes" : "No"}</td>
+                    </tr>
+                    <tr>
+                      <td>Number of Seats:</td>
+                      <td>{car.interiorDetails?.seatingCapacity}</td>
+                    </tr>
+                  </tbody>
+                </motion.table>
+              </div>
 
-            <div className="overflow-x-auto">
-              <motion.table
+              <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 }}
-                className="table"
+                transition={{ duration: 0.5, delay: 1.2 }}
+                className="mt-8 text-2xl text-center text-accent font-semibold"
               >
-                <tbody>
-                  <tr>
-                    <th>Condition of Exterior</th>
-                    <td>
-                      {car.exteriorDetails?.condition}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Paint Color</th>
-                    <td>
-                      {car.exteriorDetails?.paintColor}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Tire Condition</th>
-                    <td>
-                      {car.exteriorDetails?.tireCondition}
-                    </td>
-                  </tr>
-                </tbody>
-              </motion.table>
+                Exterior Details
+              </motion.h2>
+
+              <div className="overflow-x-auto">
+                <motion.table
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.4 }}
+                  className="table"
+                >
+                  <tbody>
+                    <tr>
+                      <th>Condition of Exterior</th>
+                      <td>{car.exteriorDetails?.condition}</td>
+                    </tr>
+                    <tr>
+                      <th>Paint Color</th>
+                      <td>{car.exteriorDetails?.paintColor}</td>
+                    </tr>
+                    <tr>
+                      <th>Tire Condition</th>
+                      <td>{car.exteriorDetails?.tireCondition}</td>
+                    </tr>
+                  </tbody>
+                </motion.table>
+              </div>
             </div>
-            </div>
-            {/*      TABLES END     */} 
+            {/*      TABLES END     */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
