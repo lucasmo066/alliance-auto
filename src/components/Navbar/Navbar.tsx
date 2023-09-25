@@ -52,7 +52,7 @@ const Navbar = () => {
               <Link href="/cars">Cars</Link>
             </li>
             <li>
-              <a>Why Us?</a>
+              <a>Why Buy From Us?</a>
               <ul className="p-2">
                 <li>
                   <a>Testimonials</a>
@@ -89,7 +89,7 @@ const Navbar = () => {
           </li>
           <li tabIndex={0}>
             <details>
-              <summary>Why Us?</summary>
+              <summary>Why Buy From Us?</summary>
               <ul className="p-2">
                 <li>
                   <a>Testimonials</a>

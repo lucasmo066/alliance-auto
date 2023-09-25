@@ -46,18 +46,17 @@ export function CarPage({ car }: CarPageProps) {
               images={car.images.map((image) => urlForImage(image).url()!)}
             />
 
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-8 text-2xl text-center text-accent font-semibold"
-            >
-              Car Details
-            </motion.h2>
-
             {/*      TABLES START     */}
             <div className="">
               <div className="overflow-x-auto">
+                <motion.h2
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="mt-8 text-2xl text-center text-accent font-semibold"
+                >
+                  Car Details
+                </motion.h2>
                 <motion.table
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -99,16 +98,15 @@ export function CarPage({ car }: CarPageProps) {
                 </motion.table>
               </div>
 
-              <motion.h2
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="mt-8 text-2xl text-center text-accent font-semibold"
-              >
-                Interior Details
-              </motion.h2>
-
               <div className="overflow-x-auto">
+                <motion.h2
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  className="mt-8 text-2xl text-center text-accent font-semibold"
+                >
+                  Interior Details
+                </motion.h2>
                 <motion.table
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -132,16 +130,15 @@ export function CarPage({ car }: CarPageProps) {
                 </motion.table>
               </div>
 
-              <motion.h2
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.2 }}
-                className="mt-8 text-2xl text-center text-accent font-semibold"
-              >
-                Exterior Details
-              </motion.h2>
-
               <div className="overflow-x-auto">
+                <motion.h2
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.2 }}
+                  className="mt-8 text-2xl text-center text-accent font-semibold"
+                >
+                  Exterior Details
+                </motion.h2>
                 <motion.table
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}

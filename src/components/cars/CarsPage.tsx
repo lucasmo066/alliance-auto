@@ -26,7 +26,7 @@ export function CarsPage({ cars }: CarsPageProps) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
       >
-        Available Cars
+        Cars Inventory
       </motion.h1>
       <motion.div
         className="divider divider-center mb-8 mx-10"

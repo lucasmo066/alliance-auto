@@ -7,7 +7,7 @@ const Hero = () => {
   const headerText =
     "Discover Unmatched Quality in Used Cars at Marietta's Trusted Dealership";
   const paragraphText =
-    "Welcome to Marietta's premier destination for exceptional used cars. With 15 years of unwavering commitment to great value, top-notch mechanics, transparent selling practices, and a reputation built on trust, we are your trusted choice for finding the perfect vehicle. Explore our vast inventory and experience top-quality customer service like never before.";
+    "Welcome to Marietta's premier destination for exceptional pre-owned cars. With 15 years of unwavering commitment to great value, top-notch mechanics, transparent selling practices, and a reputation built on trust, we are your trusted choice for finding the perfect vehicle. Explore our vast inventory and experience top-quality customer service like never before.";
 
   const controls = useAnimation();
 
@@ -69,7 +69,7 @@ const Hero = () => {
                 opacity: 1,
                 transition: {
                   duration: 1,
-                  delay: 1, // Delay the start of the animation
+                  delay: 1.1,
                 },
               },
               hidden: { opacity: 0 },
@@ -78,11 +78,26 @@ const Hero = () => {
           >
             {paragraphText}
           </motion.p>
-          <a href="/cars">
-            <button className="btn bg-accent hover:bg-red-400 text-white px-10">
-              See Available Cars
-            </button>
-          </a>
+          <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: {
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  delay: 1,
+                },
+              },
+              hidden: { opacity: 0 },
+            }}
+          >
+            <a href="/cars">
+              <button className="btn bg-accent hover:bg-red-400 text-white px-10">
+                See Available Cars
+              </button>
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>
