@@ -56,10 +56,22 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      type: "number", // Change to 'number' type for cost
+      type: "object",
       name: "cost",
       title: "Cost",
-      validation: (rule) => rule.required(),
+      fields: [
+        defineField({
+          type: "number",
+          name: "price",
+          title: "Price",
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          type: "number",
+          name: "kbbHigh",
+          title: "What is the KBB High Price?",
+        }),
+      ],
     }),
     defineField({
       type: "boolean",
@@ -90,8 +102,8 @@ export default defineType({
       fields: [
         defineField({
           type: "string",
-          name: "material",
-          title: "Material of Seats",
+          name: "interiorColor",
+          title: "Interior Color",
         }),
         defineField({
           type: "boolean",

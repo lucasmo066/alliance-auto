@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
         <a href="/">
           <Image
-            src="/alliance.png"
+            src="/3.png"
             alt="Alliance Group Auto Logo"
             width={200}
             height={50}

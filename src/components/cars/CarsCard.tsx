@@ -51,7 +51,7 @@ export default function CarsCard({ car }: CarsCardProps) {
           {car.mileage.toLocaleString()} miles
         </p>
         <p className="text-2xl font-bold text-success">
-          Cost: ${car.cost.toLocaleString()}
+          Cost: ${car.cost?.price.toLocaleString()}
         </p>
         <a>
           {isSold ? (

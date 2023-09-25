@@ -8,6 +8,7 @@ import CopyToClipboardButton from "~/components/buttons/CopyToClipboardButton";
 import SetAppointmentButton from "~/components/buttons/SetAppointmentButton";
 import CarfaxButton from "~/components/buttons/CarfaxButton";
 import Breadcrumb from "~/components/Breadcrumbs";
+import CostDetails from "~/components/cars/car/CostDetails";
 
 export interface CarPageProps {
   car: CarPayload | null;
@@ -83,7 +84,7 @@ export function CarPage({ car }: CarPageProps) {
                       <td className="text-center">{car.transmission}</td>
                     </tr>
                     <tr>
-                      <th>Mileage:</th>
+                      <th>Odometer:</th>
                       <td className="text-center">
                         {car.mileage.toLocaleString()} miles
                       </td>
@@ -115,8 +116,8 @@ export function CarPage({ car }: CarPageProps) {
                 >
                   <tbody>
                     <tr>
-                      <td>Seat Material:</td>
-                      <td>{car.interiorDetails?.material}</td>
+                      <td>Interior Color:</td>
+                      <td>{car.interiorDetails?.interiorColor}</td>
                     </tr>
                     <tr>
                       <td>Sunroof:</td>
@@ -170,30 +171,7 @@ export function CarPage({ car }: CarPageProps) {
               className="divider"
             ></motion.div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.8 }}
-              className="text-2xl text-accent text-center font-semibold"
-            >
-              Cost Details
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 2.0 }}
-              className="py-4 text-center space-y-4"
-            >
-              <p className="text-lg font-semibold">
-                Price: ${car.cost.toLocaleString()}
-              </p>
-              <p className="text-lg font-semibold">
-                Tax (7%): ${(car.cost * 0.07).toLocaleString()}
-              </p>
-              <p className="text-3xl font-semibold text-green-500">
-                Total Cost: ${(car.cost * 1.07).toLocaleString()}
-              </p>
-            </motion.div>
+            <CostDetails car={car} />
           </div>
 
           <motion.div

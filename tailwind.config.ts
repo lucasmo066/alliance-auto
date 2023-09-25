@@ -32,7 +32,7 @@ const config: Config = {
 
             neutral: "#23282f",
 
-            "base-100": "#111827",
+            "base-100": "#191C22",
 
             info: "#dbeafe",
 
