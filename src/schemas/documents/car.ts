@@ -44,7 +44,7 @@ export default defineType({
       validation: (rule) => rule.required().length(17),
     }),
     defineField({
-      type: "number", // Change to 'number' type for mileage
+      type: "number",
       name: "mileage",
       title: "Mileage",
       validation: (rule) => rule.required(),
@@ -73,6 +73,50 @@ export default defineType({
         }),
       ],
     }),
+defineField({
+  type: "object",
+  name: "warranty",
+  title: "Warranty Information",
+  fields: [
+    defineField({
+      type: "string",
+      name: "standard",
+      title: "Standard Warranty",
+      description: "Standard warranty included with the car.",
+      options: {
+        list: ["30 days or 300 miles"],
+      },
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      type: "object",
+      name: "motor",
+      title: "Motor Warranty",
+      fields: [
+        defineField({
+          type: "number",
+          name: "price",
+          title: "Price",
+          description: "Price for the motor warranty (if purchased).",
+        }),
+      ],
+    }),
+    defineField({
+      type: "object",
+      name: "transmission",
+      title: "Transmission Warranty",
+      fields: [
+        defineField({
+          type: "number",
+          name: "price",
+          title: "Price",
+          description: "Price for the transmission warranty (if purchased).",
+        }),
+      ],
+    }),
+  ],
+}),
+
     defineField({
       type: "boolean",
       name: "sold",

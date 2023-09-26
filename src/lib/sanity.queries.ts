@@ -11,6 +11,7 @@ export const getAllCars = groq`
         transmission,
         cost,
         sold,
+        warranty,
         "mainImage": images[0],
         "slug": slug.current,
     }
@@ -34,6 +35,7 @@ export const carsBySlugQuery = groq`
     interiorDetails,
     exteriorDetails,
     images,
+    warranty,
     "slug": slug.current,
   }
 `;

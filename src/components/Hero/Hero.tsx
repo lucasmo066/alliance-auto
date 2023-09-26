@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import AccentButton from "../buttons/AccentButton";
 
 const Hero = () => {
   const headerText =
@@ -43,8 +44,8 @@ const Hero = () => {
               visible: {
                 opacity: 1,
                 transition: {
-                  duration: 1,
-                  delay: 1,
+                  duration: .7,
+                  delay: .2,
                   staggerChildren: 0.04,
                 },
               },
@@ -69,7 +70,7 @@ const Hero = () => {
                 opacity: 1,
                 transition: {
                   duration: 1,
-                  delay: 1.1,
+                  delay: .5,
                 },
               },
               hidden: { opacity: 0 },
@@ -86,17 +87,13 @@ const Hero = () => {
                 opacity: 1,
                 transition: {
                   duration: 1,
-                  delay: 1,
+                  delay: .5,
                 },
               },
               hidden: { opacity: 0 },
             }}
           >
-            <a href="/cars">
-              <button className="btn bg-accent hover:bg-red-400 text-white px-10">
-                See Available Cars
-              </button>
-            </a>
+            <AccentButton href="/cars" label="View Inventory" />
           </motion.div>
         </div>
       </div>

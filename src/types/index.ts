@@ -6,6 +6,16 @@ export interface Make {
   title?: string;
 }
 
+export interface Warranty {
+  standard: string; // This field can have values like "30 days or 300 miles"
+  motor: {
+    price?: number; // Price for the motor warranty (if purchased)
+  };
+  transmission: {
+    price?: number; // Price for the transmission warranty (if purchased)
+  };
+}
+
 export interface ShortCar {
   _id?: string;
   name?: string;
@@ -22,6 +32,7 @@ export interface ShortCar {
   transmission?: string;
   mainImage?: Image;
   sold?: boolean;
+  warranty?: Warranty; 
 }
 
 export interface CarsPagePayload {
@@ -47,7 +58,7 @@ export interface CarPayload {
   emissionStatus?: boolean;
   previousOwners?: number;
   interiorDetails?: {
-    material?: string;
+    interiorColor?: string;
     sunroof?: boolean;
     seatingCapacity?: string;
   };
@@ -57,4 +68,5 @@ export interface CarPayload {
     tireCondition?: string;
   };
   images?: Image[];
+  warranty?: Warranty; 
 }

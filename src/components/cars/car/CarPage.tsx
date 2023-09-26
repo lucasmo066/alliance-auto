@@ -1,20 +1,22 @@
 "use client";
+import React, { useState } from "react";
 import { CarPayload } from "~/types";
 import { urlForImage } from "~/lib/sanity.image";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import ImageCarousel from "./ImageCarousel";
 import CopyToClipboardButton from "~/components/buttons/CopyToClipboardButton";
-import SetAppointmentButton from "~/components/buttons/SetAppointmentButton";
+import PrimaryButton from "~/components/buttons/PrimaryButton";
 import CarfaxButton from "~/components/buttons/CarfaxButton";
 import Breadcrumb from "~/components/Breadcrumbs";
 import CostDetails from "~/components/cars/car/CostDetails";
+
 
 export interface CarPageProps {
   car: CarPayload | null;
 }
 
 export function CarPage({ car }: CarPageProps) {
+ 
   return (
     <>
       {car && car.images && car.images.length > 0 && (
@@ -170,9 +172,10 @@ export function CarPage({ car }: CarPageProps) {
               transition={{ duration: 0.5, delay: 1.6 }}
               className="divider"
             ></motion.div>
-
+            
             <CostDetails car={car} />
           </div>
+          
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -180,7 +183,7 @@ export function CarPage({ car }: CarPageProps) {
             transition={{ duration: 0.5, delay: 2.2 }}
             className="text-center space-x-4 mb-10"
           >
-            <SetAppointmentButton href="https://www.calendly.com/alliancegroupauto/carappt" />
+            <PrimaryButton href="https://www.calendly.com/alliancegroupauto/carappt" label="Get Today's Price"/>
             <CopyToClipboardButton />
           </motion.div>
         </motion.div>

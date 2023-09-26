@@ -5,6 +5,7 @@ import Image from "next/image";
 import { urlForImage } from "~/lib/sanity.image";
 import { ShortCar } from "~/types/index";
 import { motion } from "framer-motion";
+import AccentButton from "../buttons/AccentButton";
 
 interface CarsCardProps {
   car: ShortCar;
@@ -50,7 +51,7 @@ export default function CarsCard({ car }: CarsCardProps) {
         <p className="text-lg text-white">
           {car.mileage.toLocaleString()} miles
         </p>
-        <p className="text-2xl font-bold text-success">
+        <p className="text-2xl font-bold text-success mb-5">
           Cost: ${car.cost?.price.toLocaleString()}
         </p>
         <a>
@@ -59,13 +60,7 @@ export default function CarsCard({ car }: CarsCardProps) {
               Sold!
             </motion.button>
           ) : (
-            <motion.button
-              className="btn bg-accent hover:bg-red-400 text-white my-5 px-10"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              See Details!
-            </motion.button>
+            <AccentButton href={`/cars/${car.slug}`} label="View Details" />
           )}
         </a>
       </div>
