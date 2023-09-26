@@ -22,7 +22,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ crumbs }) => {
   }, []);
 
   return (
-    <div className="text-sm text-secondary mx-5 breadcrumbs">
+    <div className="text-md text-secondary mx-5 breadcrumbs">
       <ul>
         <li>
           <Link href="/">Home</Link>

@@ -1,5 +1,6 @@
 import type { Image } from "sanity";
 
+// car realted interfaces
 export interface Make {
   _id?: string;
   _type?: "make";
@@ -7,12 +8,12 @@ export interface Make {
 }
 
 export interface Warranty {
-  standard: string; // This field can have values like "30 days or 300 miles"
+  standard: string; 
   motor: {
-    price?: number; // Price for the motor warranty (if purchased)
+    price?: number;
   };
   transmission: {
-    price?: number; // Price for the transmission warranty (if purchased)
+    price?: number; 
   };
 }
 
@@ -69,4 +70,24 @@ export interface CarPayload {
   };
   images?: Image[];
   warranty?: Warranty;
+}
+
+// testimonials related interfaces
+export interface Testimonial {
+  _id?: string;
+  _type?: 'testimonial';
+  name?: string;
+  avatar?: {
+    asset?: {
+      _ref?: string;
+    };
+    hotspot?: {
+      x?: number;
+      y?: number;
+      height?: number;
+      width?: number;
+    };
+    alt?: string;
+  };
+  message?: string;
 }
