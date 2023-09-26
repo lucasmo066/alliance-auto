@@ -6,10 +6,7 @@ interface AccentButtonProps {
   label: string; // Add a label prop
 }
 
-const AccentButton: React.FC<AccentButtonProps> = ({
-  href,
-  label,
-}) => {
+const AccentButton: React.FC<AccentButtonProps> = ({ href, label }) => {
   return (
     <a href={href}>
       <motion.button

@@ -15,7 +15,7 @@ const ulVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.0, 
+      duration: 1.0,
     },
   },
 };
@@ -106,7 +106,10 @@ const Navbar = () => {
         </motion.ul>
       </div>
       <div className="navbar-end">
-        <PrimaryButton href="https://www.calendly.com/alliancegroupauto/carappt" label="Set Appointment"/>
+        <PrimaryButton
+          href="https://www.calendly.com/alliancegroupauto/carappt"
+          label="Set Appointment"
+        />
       </div>
     </div>
   );

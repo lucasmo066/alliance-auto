@@ -8,21 +8,23 @@ interface CostDetailsProps {
 
 const CostDetails: React.FC<CostDetailsProps> = ({ car }) => {
   const [includeMotorWarranty, setIncludeMotorWarranty] = useState(false);
-  const [includeTransmissionWarranty, setIncludeTransmissionWarranty] = useState(false);
+  const [includeTransmissionWarranty, setIncludeTransmissionWarranty] =
+    useState(false);
   const [totalCost, setTotalCost] = useState<number | null>(null);
 
   // Calculate the total cost including the warranties if checked
   useEffect(() => {
     const basePrice = car?.cost?.price || 0;
     const motorWarrantyPrice = includeMotorWarranty
-      ? (car?.warranty?.motor?.price || 0)
+      ? car?.warranty?.motor?.price || 0
       : 0;
     const transmissionWarrantyPrice = includeTransmissionWarranty
-      ? (car?.warranty?.transmission?.price || 0)
+      ? car?.warranty?.transmission?.price || 0
       : 0;
 
     // Calculate the total cost
-    const updatedTotalCost = basePrice + motorWarrantyPrice + transmissionWarrantyPrice;
+    const updatedTotalCost =
+      basePrice + motorWarrantyPrice + transmissionWarrantyPrice;
 
     // Update the total cost state
     setTotalCost(updatedTotalCost);
@@ -57,7 +59,10 @@ const CostDetails: React.FC<CostDetailsProps> = ({ car }) => {
         whileHover={{ scale: 1.05, boxShadow: "0px 0px 10px 0px #FFFF00" }}
       >
         <p className="text-center text-yellow-400 text-lg mb-5">
-          All cars sold by Alliance Group Autobrokers come with 30 days or 300 miles of free warranty with the first four oil changes included if conditions are met. Customers can choose to purchase additional warranties for 12,000 miles or one year.
+          All cars sold by Alliance Group Autobrokers come with 30 days or 300
+          miles of free warranty with the first four oil changes included if
+          conditions are met. Customers can choose to purchase additional
+          warranties for 12,000 miles or one year.
         </p>
         {/* Checkbox for including the motor warranty */}
         <div className="form-control">
@@ -83,15 +88,18 @@ const CostDetails: React.FC<CostDetailsProps> = ({ car }) => {
               type="checkbox"
               className="checkbox checkbox-warning"
               checked={includeTransmissionWarranty}
-              onChange={() => setIncludeTransmissionWarranty(!includeTransmissionWarranty)}
+              onChange={() =>
+                setIncludeTransmissionWarranty(!includeTransmissionWarranty)
+              }
             />
           </label>
         </div>
       </motion.div>
-      
+
       {/* Display the updated total cost */}
       <p className="text-4xl text-success pt-3 pb-10">
-        Total Cost: ${(totalCost || 0).toLocaleString()} <small className="text-sm">+ tax</small>
+        Total Cost: ${(totalCost || 0).toLocaleString()}{" "}
+        <small className="text-sm">+ tax</small>
       </p>
     </motion.div>
   );

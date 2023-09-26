@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md mx-auto">
           <Image
-            src="/1.png"
+            src="/2.png"
             width={200}
             height={200}
             alt="logo"
@@ -44,8 +44,8 @@ const Hero = () => {
               visible: {
                 opacity: 1,
                 transition: {
-                  duration: .7,
-                  delay: .2,
+                  duration: 0.7,
+                  delay: 0.2,
                   staggerChildren: 0.04,
                 },
               },
@@ -70,7 +70,7 @@ const Hero = () => {
                 opacity: 1,
                 transition: {
                   duration: 1,
-                  delay: .5,
+                  delay: 0.5,
                 },
               },
               hidden: { opacity: 0 },
@@ -87,7 +87,7 @@ const Hero = () => {
                 opacity: 1,
                 transition: {
                   duration: 1,
-                  delay: .5,
+                  delay: 0.5,
                 },
               },
               hidden: { opacity: 0 },

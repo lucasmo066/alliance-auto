@@ -10,13 +10,11 @@ import CarfaxButton from "~/components/buttons/CarfaxButton";
 import Breadcrumb from "~/components/Breadcrumbs";
 import CostDetails from "~/components/cars/car/CostDetails";
 
-
 export interface CarPageProps {
   car: CarPayload | null;
 }
 
 export function CarPage({ car }: CarPageProps) {
- 
   return (
     <>
       {car && car.images && car.images.length > 0 && (
@@ -172,10 +170,9 @@ export function CarPage({ car }: CarPageProps) {
               transition={{ duration: 0.5, delay: 1.6 }}
               className="divider"
             ></motion.div>
-            
+
             <CostDetails car={car} />
           </div>
-          
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -183,7 +180,10 @@ export function CarPage({ car }: CarPageProps) {
             transition={{ duration: 0.5, delay: 2.2 }}
             className="text-center space-x-4 mb-10"
           >
-            <PrimaryButton href="https://www.calendly.com/alliancegroupauto/carappt" label="Get Today's Price"/>
+            <PrimaryButton
+              href="https://www.calendly.com/alliancegroupauto/carappt"
+              label="Get Today's Price"
+            />
             <CopyToClipboardButton />
           </motion.div>
         </motion.div>

@@ -35,7 +35,7 @@ const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = () => {
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="btn btn-outline text-primary hover:bg-blue-400 font-bold py-2 px-4 rounded-half"
+      className="btn btn-outline text-secondary hover:bg-blue-400 font-bold py-2 px-4 rounded-half"
       onClick={handleCopyClick}
     >
       {copied ? "Link Copied to Clipboard" : "Share"}

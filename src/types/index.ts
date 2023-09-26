@@ -32,7 +32,7 @@ export interface ShortCar {
   transmission?: string;
   mainImage?: Image;
   sold?: boolean;
-  warranty?: Warranty; 
+  warranty?: Warranty;
 }
 
 export interface CarsPagePayload {
@@ -68,5 +68,5 @@ export interface CarPayload {
     tireCondition?: string;
   };
   images?: Image[];
-  warranty?: Warranty; 
+  warranty?: Warranty;
 }
