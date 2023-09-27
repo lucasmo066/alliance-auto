@@ -20,6 +20,7 @@ export interface Warranty {
 export interface ShortCar {
   _id?: string;
   name?: string;
+  date?: Date;
   slug?: string;
   make?: Make;
   model?: string;
@@ -40,10 +41,12 @@ export interface CarsPagePayload {
   cars?: ShortCar[];
 }
 
+
 export interface CarPayload {
   _id?: string;
   _type?: "car";
   name?: string;
+  date?: Date;
   slug?: string;
   make?: Make;
   model?: string;

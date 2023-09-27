@@ -12,6 +12,12 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      type: "date",
+      name: "date",
+      title: "Date",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       type: "slug",
       name: "slug",
       title: "Slug",

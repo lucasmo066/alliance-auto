@@ -44,8 +44,8 @@ const ContactUs: React.FC = () => {
   >
     <div className="my-2 p-10">
       <div className="md:flex md:items-center">
-        <div className="md:w-1/2">
-          <h2 className="text-4xl text-center text-accent font-bold">Contact Us</h2>
+        <div className="w-1/2">
+          <h2 className="text-4xl text-center text-accent font-bold">Get in touch.</h2>
           <p className="mt-2 mb-4 text-secondary md:mb-0 md:text-lg">
             Any questions? Please fill out the form below.
           </p>

@@ -55,7 +55,7 @@ const CostDetails: React.FC<CostDetailsProps> = ({ car }) => {
       <div className="divider px-10"></div>
       {/* Warranty info div with shine effect */}
       <motion.div
-        className="w-3/4 border rounded border-yellow-400 bg-yellow-500 bg-opacity-20 p-4 mx-auto"
+        className="w-3/4 border rounded border-yellow-400 bg-yellow-500 bg-opacity-20 p-6 mx-auto"
         whileHover={{ scale: 1.05, boxShadow: "0px 0px 10px 0px #FFFF00" }}
       >
         <p className="text-center text-yellow-400 text-lg mb-5">

@@ -10,7 +10,10 @@ export interface CarsPageProps {
 }
 
 export function CarsPage({ cars }: CarsPageProps) {
+  if (!cars) return null;
+
   return (
+    
     <>
       {/* Breadcrumbs */}
       <motion.div
@@ -28,6 +31,7 @@ export function CarsPage({ cars }: CarsPageProps) {
       >
         Cars Inventory
       </motion.h1>
+      
       <motion.div
         className="divider divider-center mb-8 mx-10"
         initial={{ width: 0 }}

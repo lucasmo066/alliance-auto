@@ -4,6 +4,7 @@ export const getAllCars = groq`
     *[_type == "car" && defined(slug.current)] | order(name asc) {
         _id,
         name,
+        date,
         make,
         model,
         year,
@@ -21,6 +22,7 @@ export const carsBySlugQuery = groq`
   *[_type == "car" && slug.current == $slug][0] {
     _id,
     name,
+    date,
     make,
     model,
     year,

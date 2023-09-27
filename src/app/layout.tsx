@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="myTheme">
+    <html lang="en">
       <body className={mulish.className}>{children}</body>
     </html>
   );

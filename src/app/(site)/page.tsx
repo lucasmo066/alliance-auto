@@ -4,6 +4,7 @@ import SellYourCarSection from "~/components/SellYourCarSection";
 import Testimonials from "~/components/Testimonials";
 import WhyBuyFromUsSection from "~/components/WhyBuyFromUs";
 
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
