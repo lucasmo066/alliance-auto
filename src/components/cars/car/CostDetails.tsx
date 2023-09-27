@@ -99,7 +99,7 @@ const CostDetails: React.FC<CostDetailsProps> = ({ car }) => {
       {/* Display the updated total cost */}
       <p className="text-4xl text-success pt-3 pb-10">
         Total Cost: ${(totalCost || 0).toLocaleString()}{" "}
-        <small className="text-sm">+ tax</small>
+        <small className="text-sm">+ tax, tag, & title fees</small>
       </p>
     </motion.div>
   );

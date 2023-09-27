@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from "react";
 import Image from "next/image";
@@ -26,11 +26,12 @@ export default function CarsCard({ car }: CarsCardProps) {
   };
 
   return (
-    <div
-      className={`flex flex-col items-center justify-start bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg shadow-xl p-5 lg:p-10 h-full ${
+    <motion.div
+      className={`flex flex-col items-center justify-start bg-gray-500 bg-opacity-20 hover:bg-gray-500 rounded-lg shadow-xl shadow-gray-700 p-5 lg:p-10 h-full ${
         isSold ? "disabled" : ""
       }`}
       onClick={handleCardClick}
+      whileHover={{ scale: 1.03, transition: { duration: 0.2 } }} // Shine effect on hover
     >
       <div className="flex items-center justify-center mb-4 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600">
         <Image
@@ -56,7 +57,7 @@ export default function CarsCard({ car }: CarsCardProps) {
         </p>
         <a>
           {isSold ? (
-            <motion.button className="btn bg-white-500 my-5 px-10" disabled>
+            <motion.button className="btn bg-white-500 my-5 px-10">
               Sold!
             </motion.button>
           ) : (
@@ -64,6 +65,6 @@ export default function CarsCard({ car }: CarsCardProps) {
           )}
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }

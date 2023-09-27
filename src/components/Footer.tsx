@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     >
       <aside>
         <Image
-          src="/3.png"
+          src="/2.png"
           alt="Alliance Group Auto Logo"
           width={200}
           height={50}
@@ -25,6 +25,11 @@ const Footer: React.FC = () => {
         </p>
         <p>Copyright © 2023 - All right reserved</p>
       </aside>
+      <p className="font-bold -mb-6">Receive updates when we post new cars and deals!</p>
+      <div className="relative">
+        <input type="text" placeholder="email" className="input input-bordered w-full pr-16" /> 
+        <button className="btn btn-error absolute top-0 right-0 rounded-l-none">Subscribe</button>
+      </div>
     </motion.footer>
   );
 };
