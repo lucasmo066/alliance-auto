@@ -75,7 +75,7 @@ export const pageStructure = (
     });
 
     // store post, location, member, service, insurance, and tier in the same list
-    const dynamicDocuments = ["car", "testimonial"];
+    const dynamicDocuments = ["car"];
 
     const dynamic = S.documentTypeListItems().filter((listItem) =>
       dynamicDocuments.includes(listItem.getId() as string),

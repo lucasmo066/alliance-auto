@@ -18,7 +18,7 @@ import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
 import { media } from "sanity-plugin-media";
 import make from "~/schemas/singletons/make";
 import car from "~/schemas/documents/car";
-import testimonials from "~/schemas/documents/testimonials";
+
 
 const title = "Alliance Auto Group";
 
@@ -36,7 +36,6 @@ export default defineConfig({
       make,
       // Documents
       car,
-      testimonials
     ],
   },
   plugins: [

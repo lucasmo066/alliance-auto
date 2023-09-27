@@ -72,22 +72,10 @@ export interface CarPayload {
   warranty?: Warranty;
 }
 
-// testimonials related interfaces
-export interface Testimonial {
-  _id?: string;
-  _type?: 'testimonial';
-  name?: string;
-  avatar?: {
-    asset?: {
-      _ref?: string;
-    };
-    hotspot?: {
-      x?: number;
-      y?: number;
-      height?: number;
-      width?: number;
-    };
-    alt?: string;
-  };
-  message?: string;
-}
+
+
+
+
+
+
+

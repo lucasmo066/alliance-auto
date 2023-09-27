@@ -43,12 +43,3 @@ export const carsBySlugQuery = groq`
 export const carPaths = groq`
   *[_type == "car" && slug.current != null].slug.current
 `;
-
-export const getAllTestimonials = groq`
-  *[_type == "testimonial"] | order(_createdAt desc) {
-    _id,
-    name,
-    images,
-    message,
-  }
-`;

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { CarPayload } from "~/types";
 import { urlForImage } from "~/lib/sanity.image";
 import { motion } from "framer-motion";

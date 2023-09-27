@@ -35,7 +35,7 @@ const CostDetails: React.FC<CostDetailsProps> = ({ car }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 2.0 }}
-      className="py-2 text-center space-y-4 bg-neutral bg-opacity-80 shadow-lg rounded opacity-90"
+      className="py-2 text-center space-y-4 bg-neutral bg-opacity-80 shadow-lg rounded"
     >
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
