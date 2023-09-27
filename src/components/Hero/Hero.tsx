@@ -75,7 +75,7 @@ const Hero = () => {
               },
               hidden: { opacity: 0 },
             }}
-            className="mb-5 text-white"
+            className="text-lg mb-5 text-white"
           >
             {paragraphText}
           </motion.p>

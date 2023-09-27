@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -47,10 +47,24 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="w-full overflow-hidden">
-        <h2 className="text-3xl font-semibold text-center text-accent">Don't Believe Us?</h2>
-        <h3 className="text-2xl font-semibold text-center text-accent">Hear It From Our Customers!</h3>
-      <Marquee direction="left" speed={90}>
+    <div className="w-full overflow-hidden pb-10">
+      <motion.h2
+        className="text-3xl font-semibold text-center text-accent"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.0 }}
+      >
+        Don&apos;t Believe Us?
+      </motion.h2>
+      <motion.h3
+        className="text-2xl font-semibold text-center text-accent"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.0 }}
+      >
+        Hear It From Our Customers!
+      </motion.h3>
+      <Marquee direction="left" speed={40}>
         {testimonials.map((testimonial) => (
           <motion.div
             key={testimonial.id}

@@ -1,112 +1,181 @@
-"use client";
-import React from "react";
+'use client';
+
+import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import Image from "next/image";
+import { motion } from "framer-motion";
 
-const ContactUs = () => {
-  const { handleSubmit, control, formState } = useForm();
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  messageType: string;
+  message: string;
+}
 
-  const onSubmit = (data) => {
-    // Handle the form submission here
-    console.log(data);
+const ContactUs: React.FC = () => {
+  const {
+    control,
+    handleSubmit,
+    register,
+    formState: { errors }, // Access errors from formState
+    reset, // Reset function to clear the form
+  } = useForm<FormData>({
+    mode: "onBlur", // Validate on blur
+  });
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  const onSubmit = (data: FormData) => {
+    // Handle form submission here (you can make an API call or any other action)
+
+    // Assuming the submission was successful, show the success message
+    setShowSuccessMessage(true);
+
+    // Clear the form
+    reset();
   };
 
   return (
-    <div className="container mx-auto p-8">
-      <h2 className="text-3xl font-semibold text-center mb-4">Contact Us</h2>
-      <div className="border border-red-500 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="border lg:col-1/2">
-          <div className="p-4 mx-auto lg:mx-0">
-            <Image
-              src="/carLot.jpeg"
-              width={800}
-              height={500}
-              alt="Car Lot at Alliance Group Autobrokers"
-              className="w-full object-cover"
-            />
-          </div>
+    <div className="bg-neutral rounded shadow-xl my-10 p-10">
+      <div className="md:flex md:items-center">
+        <div className="md:w-1/2">
+          <h2 className="text-4xl text-center text-accent font-bold">Contact Us</h2>
+          <p className="mt-2 mb-4 text-secondary md:mb-0 md:text-lg">
+            Any questions? Please fill out the form below.
+          </p>
         </div>
-        <div className="lg:col-1/2">
+        <div className="md:w-1/2 md:pl-4">
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-group mb-4">
-              <label className="text-lg">Name</label>
-              <Controller
+            {showSuccessMessage && (
+              <div className="alert alert-success mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="stroke-current shrink-0 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>Your message has been sent!</span>
+              </div>
+            )}
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-sm font-medium text-white">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
                 name="name"
-                control={control}
-                rules={{ required: true }}
-                render={({ field }) => (
-                  <input {...field} className="form-input" />
-                )}
+                {...register('name', { required: true })}
+                className={`mt-1 p-2 w-full rounded-md border-gray-300 ${
+                  errors.name ? "border-red-500" : ""
+                }`}
               />
-              {formState.errors.name && (
+              {errors.name && (
                 <p className="text-red-600">Name is required</p>
               )}
             </div>
-            <div className="form-group mb-4">
-              <label className="text-lg">Phone</label>
-              <Controller
-                name="phone"
-                control={control}
-                rules={{ required: true }}
-                render={({ field }) => (
-                  <input {...field} className="form-input" />
-                )}
-              />
-              {formState.errors.phone && (
-                <p className="text-red-600">Phone is required</p>
-              )}
-            </div>
-            <div className="form-group mb-4">
-              <label className="text-lg">Email</label>
-              <Controller
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium text-white">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
                 name="email"
-                control={control}
-                rules={{ required: true, pattern: /^\S+@\S+$/i }}
-                render={({ field }) => (
-                  <input {...field} className="form-input" />
-                )}
+                {...register('email', {
+                  required: true,
+                  pattern: /^\S+@\S+$/i, // Email pattern
+                })}
+                className={`mt-1 p-2 w-full rounded-md border-gray-300 ${
+                  errors.email ? "border-red-500" : ""
+                }`}
               />
-              {formState.errors.email && (
+              {errors.email && (
                 <p className="text-red-600">Enter a valid email</p>
               )}
             </div>
-            <div className="form-group mb-4">
-              <label className="text-lg">Message</label>
-              <Controller
-                name="message"
-                control={control}
-                rules={{ required: true }}
-                render={({ field }) => (
-                  <textarea {...field} className="form-textarea" />
-                )}
+            <div className="mb-4">
+              <label htmlFor="phone" className="block text-sm font-medium text-white">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                {...register('phone', {
+                  required: true,
+                  pattern: /^\d{10}$/i, // Phone number pattern (10 digits)
+                })}
+                className={`mt-1 p-2 w-full rounded-md border-gray-300 ${
+                  errors.phone ? "border-red-500" : ""
+                }`}
               />
-              {formState.errors.message && (
-                <p className="text-red-600">Message is required</p>
+              {errors.phone && (
+                <p className="text-red-600">Enter a valid phone number (10 digits)</p>
               )}
             </div>
-            <div className="form-group mb-4">
-              <label className="text-lg">What are you looking for?</label>
+            <div className="mb-4">
+              <label htmlFor="messageType" className="block text-sm font-medium text-white">
+                What are you interested in?
+              </label>
               <Controller
-                name="interest"
+                name="messageType"
                 control={control}
+                defaultValue=""
                 rules={{ required: true }}
                 render={({ field }) => (
-                  <select {...field} className="form-select">
+                  <select
+                    {...field}
+                    className={`select select-bordered w-full max-w-xs mt-1 ${
+                      errors.messageType ? "border-red-500" : ""
+                    }`}
+                  >
                     <option value="">Select an option</option>
-                    <option value="trade-in">Trade In</option>
-                    <option value="buy-car">Buy a Car</option>
-                    <option value="test-drive">Test Drive</option>
-                    {/* Add more options as needed */}
+                    <option value="Trade-Ins">Trade-Ins</option>
+                    <option value="Interest in Car">Interest in Car</option>
+                    <option value="Test Drive">Test Drive</option>
+                    <option value="Other">Other</option>
                   </select>
                 )}
               />
-              {formState.errors.interest && (
+              {errors.messageType && (
                 <p className="text-red-600">Select an option</p>
               )}
             </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-sm font-medium text-white">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                {...register('message', { required: true })}
+                className={`mt-1 p-2 w-full rounded-md border-gray-300 ${
+                  errors.message ? "border-red-500" : ""
+                }`}
+              />
+              {errors.message && (
+                <p className="text-red-600">Message is required</p>
+              )}
+            </div>
+            <div className="mt-4 text-center">
+              <button
+                type="submit"
+                className="bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>

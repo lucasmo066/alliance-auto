@@ -4,6 +4,7 @@ import { PreviewBanner } from "~/components/preview/PreviewBanner";
 import PreviewProvider from "~/components/preview/PreviewProvider";
 import { readToken } from "~/lib/sanity.api";
 import { draftMode } from "next/headers";
+import Footer from "~/components/Footer";
 
 export default async function IndexRoute({
   children,
@@ -17,6 +18,7 @@ export default async function IndexRoute({
       {preview && <PreviewBanner />}
       <Navbar />
       <div className={`flex-grow`}>{children}</div>
+      <Footer />
     </div>
   );
 

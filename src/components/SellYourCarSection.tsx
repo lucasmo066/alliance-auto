@@ -18,7 +18,7 @@ const SellYourCarSection = () => {
           src="/handingkeysover.jpeg"
           layout="fill"
           objectFit="cover"
-          alt="Background Image"
+          alt="Customer handing keys over to Alliance Group Autobrokers"
         />
       </motion.div>
 
