@@ -1,10 +1,10 @@
 import "~/styles/globals.css";
-import Navbar from "~/components/Navbar/Navbar";
+import Navbar from "~/components/ui/Navbar";
 import { PreviewBanner } from "~/components/preview/PreviewBanner";
 import PreviewProvider from "~/components/preview/PreviewProvider";
 import { readToken } from "~/lib/sanity.api";
 import { draftMode } from "next/headers";
-import Footer from "~/components/Footer";
+import Footer from "~/components/ui/Footer";
 
 export default async function IndexRoute({
   children,

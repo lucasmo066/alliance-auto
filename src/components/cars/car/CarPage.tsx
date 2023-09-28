@@ -7,7 +7,7 @@ import ImageCarousel from "./ImageCarousel";
 import CopyToClipboardButton from "~/components/buttons/CopyToClipboardButton";
 import PrimaryButton from "~/components/buttons/PrimaryButton";
 import CarfaxButton from "~/components/buttons/CarfaxButton";
-import Breadcrumb from "~/components/Breadcrumbs";
+import Breadcrumb from "~/components/ui/Breadcrumbs";
 import CostDetails from "~/components/cars/car/CostDetails";
 
 export interface CarPageProps {

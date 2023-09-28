@@ -23,5 +23,5 @@ export default function CarsList({ cars }: CarsListProps) {
         </Link>
       ))}
     </div>
-  );
+  )
 }
