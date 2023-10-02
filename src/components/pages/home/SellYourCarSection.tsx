@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from Framer Motion
 import Image from "next/image";
-import PrimaryButton from "../buttons/PrimaryButton";
+import PrimaryButton from "../../shared/buttons/PrimaryButton";
 
 const SellYourCarSection = () => {
   return (

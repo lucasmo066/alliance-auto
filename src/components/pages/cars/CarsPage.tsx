@@ -2,7 +2,7 @@
 
 import { CarsPagePayload, ShortCar } from "~/types";
 import CarsList from "./CarsList";
-import Breadcrumb from "../ui/Breadcrumbs";
+import Breadcrumb from "../../global/ui/Breadcrumbs";
 import { motion } from "framer-motion";
 
 export interface CarsPageProps {

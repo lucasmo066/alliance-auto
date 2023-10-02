@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import AccentButton from "../../buttons/AccentButton";
+import AccentButton from "../../../shared/buttons/AccentButton";
 
 const Hero = () => {
   const headerText =

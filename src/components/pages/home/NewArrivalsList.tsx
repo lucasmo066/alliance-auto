@@ -1,14 +1,14 @@
 'use client'
 import React from "react";
 import { ShortCar } from "~/types";
-import CarsCard from "./CarsCard";
+import CarsCard from "../cars/CarsCard";
 import Link from "next/link";
 
-interface NewArrivalListProps {
+interface NewArrivalsListProps {
   cars: ShortCar[];
 }
 
-export default function NewArrvalsList({ cars }: NewArrivalListProps) {
+export default function NewArrivalsList({ cars }: NewArrivalsListProps) {
   // Filter and sort the cars by date to get the newest arrivals
   const currentDate = new Date();
   const sortedCars = cars

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { urlForImage } from "~/lib/sanity.image";
 import { ShortCar } from "~/types/index";
 import { motion } from "framer-motion";
-import AccentButton from "../buttons/AccentButton";
+import AccentButton from "../../shared/buttons/AccentButton";
 
 interface CarsCardProps {
   car: ShortCar;

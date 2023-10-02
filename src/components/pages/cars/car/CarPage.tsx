@@ -4,11 +4,11 @@ import { CarPayload } from "~/types";
 import { urlForImage } from "~/lib/sanity.image";
 import { motion } from "framer-motion";
 import ImageCarousel from "./ImageCarousel";
-import CopyToClipboardButton from "~/components/buttons/CopyToClipboardButton";
-import PrimaryButton from "~/components/buttons/PrimaryButton";
-import CarfaxButton from "~/components/buttons/CarfaxButton";
-import Breadcrumb from "~/components/ui/Breadcrumbs";
-import CostDetails from "~/components/cars/car/CostDetails";
+import CopyToClipboardButton from "~/components/shared/buttons/CopyToClipboardButton";
+import PrimaryButton from "~/components/shared/buttons/PrimaryButton";
+import CarfaxButton from "~/components/shared/buttons/CarfaxButton";
+import Breadcrumb from "~/components/global/ui/Breadcrumbs";
+import CostDetails from "~/components/pages/cars/car/CostDetails";
 
 export interface CarPageProps {
   car: CarPayload | null;

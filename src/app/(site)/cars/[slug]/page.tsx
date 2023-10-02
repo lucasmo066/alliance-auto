@@ -1,6 +1,6 @@
 import "server-only";
 
-import { CarPage } from "~/components/cars/car/CarPage";
+import { CarPage } from "~/components/pages/cars/car/CarPage";
 import { carsBySlugQuery, carPaths } from "~/lib/sanity.queries";
 import { getClient } from "~/lib/sanity.client";
 import { Metadata } from "next";
@@ -9,7 +9,7 @@ import { defineMetadata } from "~/lib/utils.metadata";
 import { draftMode } from "next/headers";
 import { readToken } from "~/lib/sanity.api";
 import { CarPayload } from "~/types";
-import PreviewCarPage from "~/components/cars/car/PreviewCarPage";
+import PreviewCarPage from "~/components/pages/cars/car/PreviewCarPage";
 
 export const revalidate = 1;
 

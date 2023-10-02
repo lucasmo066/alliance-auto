@@ -1,6 +1,6 @@
 import type { Image } from "sanity";
 
-// car realted interfaces
+// car related interfaces
 export interface Make {
   _id?: string;
   _type?: "make";
@@ -37,11 +37,6 @@ export interface ShortCar {
   warranty?: Warranty;
 }
 
-export interface CarsPagePayload {
-  cars?: ShortCar[];
-}
-
-
 export interface CarPayload {
   _id?: string;
   _type?: "car";
@@ -75,6 +70,15 @@ export interface CarPayload {
   warranty?: Warranty;
 }
 
+//Page Payloads
+
+export interface CarsPagePayload {
+  cars?: ShortCar[];
+}
+
+export interface HomePagePayload {
+  cars?: ShortCar[];
+}
 
 
 

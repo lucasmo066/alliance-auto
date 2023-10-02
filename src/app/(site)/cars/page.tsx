@@ -5,8 +5,8 @@ import { getClient } from "~/lib/sanity.client";
 import { draftMode } from "next/headers";
 import { readToken } from "~/lib/sanity.api";
 import { notFound } from "next/navigation";
-import { CarsPage } from "~/components/cars/CarsPage";
-import PreviewCarsPage from "~/components/cars/PreviewCarsPage";
+import { CarsPage } from "~/components/pages/cars/CarsPage";
+import PreviewCarsPage from "~/components/pages/cars/PreviewCarsPage";
 
 export const dynamic = "force-dynamic";
 
