@@ -1,11 +1,10 @@
 import { HomePagePayload } from "~/types";
-import { Metadata } from "next";
 import { carsBySlugQuery, getAllCars } from "~/lib/sanity.queries";
 import { getClient } from "~/lib/sanity.client";
 import { draftMode } from "next/headers";
 import { readToken } from "~/lib/sanity.api";
 import { notFound } from "next/navigation";
-import HomePage from "~/components/pages/home/HomePage"
+import { HomePage } from "~/components/pages/home/HomePage"
 import PreviewHomePage from "~/components/pages/home/PreviewHomePage";
 
 export const dynamic = "force-dynamic";
