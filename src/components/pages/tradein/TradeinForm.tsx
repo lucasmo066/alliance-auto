@@ -206,16 +206,7 @@ export default function CarInfoForm() {
             />
             <label htmlFor="titleStatusLemon" className="label">Lemon</label>
           </div>
-          <div>
-            <input
-              type="radio"
-              id="titleStatusUnsure"
-              {...register("titleStatus", { required: true })}
-              value="unsure"
-              className="radio"
-            />
-            <label htmlFor="titleStatusUnsure" className="label">Unsure</label>
-          </div>
+         
           {errors.titleStatus && <span>Select a title status</span>}
         </div>
 
@@ -242,6 +233,8 @@ export default function CarInfoForm() {
             />
           </div>
         )}
+
+        
 
         <div className="flex flex-col space-y-1">
           <label htmlFor="knownIssues" className="label text-secondary">Please list any cosmetic or mechanically known issues</label>

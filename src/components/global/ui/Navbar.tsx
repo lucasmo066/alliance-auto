@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from "react";
 import Link from "next/link";
@@ -101,7 +101,7 @@ const Navbar = () => {
             </details>
           </li>
           <li>
-            <a>Contact Us</a>
+            <a href="#contact">Contact Us</a>
           </li>
         </motion.ul>
       </div>

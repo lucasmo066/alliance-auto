@@ -42,7 +42,7 @@ const ContactUs: React.FC = () => {
     transition={{ ease: "easeIn", duration: 0.5 }} // Add this transition for ease-in
     className="bg-neutral rounded shadow-xl my-10 py-5 px-10"
   >
-    <div className="my-2 p-10">
+    <div id="contact" className="my-2 p-10">
       <div className="md:flex md:items-center">
         <div className="w-1/2">
           <h2 className="text-4xl text-center text-accent font-bold">Get in touch.</h2>

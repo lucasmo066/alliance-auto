@@ -71,7 +71,6 @@ export interface CarPayload {
 }
 
 //Page Payloads
-
 export interface CarsPagePayload {
   cars?: ShortCar[];
 }
