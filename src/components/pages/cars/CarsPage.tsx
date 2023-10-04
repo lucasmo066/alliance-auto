@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { CarsPagePayload, ShortCar } from "~/types";
 import CarsList from "./CarsList";

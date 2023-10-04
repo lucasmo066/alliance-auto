@@ -6,8 +6,10 @@ import { readToken } from "~/lib/sanity.api";
 import { notFound } from "next/navigation";
 import { HomePage } from "~/components/pages/home/HomePage"
 import PreviewHomePage from "~/components/pages/home/PreviewHomePage";
+import { metadata } from "../layout";
 
 export const dynamic = "force-dynamic";
+
 
 export default async function HomeRoute() {
   const preview = draftMode().isEnabled ? { token: readToken! } : undefined;
