@@ -14,12 +14,13 @@ import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
-export interface HomePageProps {
-  cars: HomePagePayload | null;
-}
+interface HomePageProps {
+    cars: ShortCar[]; 
+  }
 
-export function HomePage({ cars }: HomePagePayload) {
-  if (!cars) return null;
+
+export function HomePage({ cars }: HomePageProps) {
+if (!cars) return null;
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">

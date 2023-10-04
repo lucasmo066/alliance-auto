@@ -13,9 +13,9 @@ export const dynamic = "force-dynamic";
 export default async function HomeRoute() {
   const preview = draftMode().isEnabled ? { token: readToken! } : undefined;
   const client = getClient(preview);
-  const data = await client.fetch<HomePagePayload | null>(getAllCars, {
+  const data = (await client.fetch(getAllCars, {
     next: { revalidate: 10 },
-  });
+  })) as HomePagePayload;
 
   if (!data && !preview) {
     notFound();

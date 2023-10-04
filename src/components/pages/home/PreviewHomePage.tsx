@@ -2,11 +2,11 @@
 
 import { getAllCars } from "~/lib/sanity.queries";
 import { useLiveQuery } from "next-sanity/preview";
-import type { HomePagePayload } from "~/types";
+import type { HomePagePayload, ShortCar } from "~/types";
 import { HomePage } from "~/components/pages/home/HomePage";
-import type { HomePageProps } from "~/components/pages/home/HomePage";
 
-export default function PreviewMembers({ cars: initialData }: HomePageProps) {
+
+export default function PreviewMembers({ cars: initialData }: HomePagePayload) {
   const [data] = useLiveQuery<HomePagePayload | null>(initialData, getAllCars);
 
   if (!data) {
@@ -17,5 +17,5 @@ export default function PreviewMembers({ cars: initialData }: HomePageProps) {
     );
   }
 
-  return <HomePage cars={data} />;
+  return <HomePage cars={data.cars} />;
 }
