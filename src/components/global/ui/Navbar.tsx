@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -65,6 +65,9 @@ const Navbar = () => {
             <li>
               <a>Contact Us</a>
             </li>
+            <li>
+              <a href="/tradein">Trade-in</a>
+            </li>
           </motion.ul>
         </div>
         <a href="/">
@@ -102,6 +105,9 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#contact">Contact Us</a>
+          </li>
+          <li>
+            <a href="#contact">Trade-in</a>
           </li>
         </motion.ul>
       </div>

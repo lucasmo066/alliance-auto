@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { getAllCars } from "~/lib/sanity.queries";
 import { useLiveQuery } from "next-sanity/preview";

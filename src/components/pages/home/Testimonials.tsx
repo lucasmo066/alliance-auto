@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Marquee from 'react-fast-marquee';
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 interface Testimonial {
   id: number;
@@ -16,33 +16,38 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: 'Rebecca J.',
-      avatar: '/rebeccaJ.png',
-      message: "A seamless car-buying experience. Their commitment to providing value and quality sets them apart from the rest.",
+      name: "Rebecca J.",
+      avatar: "/rebeccaJ.png",
+      message:
+        "A seamless car-buying experience. Their commitment to providing value and quality sets them apart from the rest.",
     },
     {
       id: 2,
-      name: 'Charlie H.',
-      avatar: '/charlieH.png',
-      message: "I appreciate the dedication to quality and trustworthiness. This dealership goes above and beyond to ensure customer satisfaction.",
+      name: "Charlie H.",
+      avatar: "/charlieH.png",
+      message:
+        "I appreciate the dedication to quality and trustworthiness. This dealership goes above and beyond to ensure customer satisfaction.",
     },
     {
       id: 3,
-      name: 'João P.',
-      avatar: '/JoaoP.png',
-      message: "Transparency is key for me when buying a car. I found it here! No hidden fees or surprises. I knew exactly what I was getting, and that's why I keep coming back.",
+      name: "João P.",
+      avatar: "/JoaoP.png",
+      message:
+        "Transparency is key for me when buying a car. I found it here! No hidden fees or surprises. I knew exactly what I was getting, and that's why I keep coming back.",
     },
     {
       id: 4,
-      name: 'Kimmy V.',
-      avatar: '/KimmyV.png',
-      message: "The free 30-day warranty is a game-changer. It gave me peace of mind knowing that if anything happened, I was covered. It's a sign of their commitment to customer satisfaction.",
+      name: "Kimmy V.",
+      avatar: "/KimmyV.png",
+      message:
+        "The free 30-day warranty is a game-changer. It gave me peace of mind knowing that if anything happened, I was covered. It's a sign of their commitment to customer satisfaction.",
     },
     {
       id: 5,
-      name: 'Chris P.',
-      avatar: '/ChrisP.png',
-      message: "If you're looking for a dealership with a reputation built on trust, look no further. They've earned their stellar reputation, and I couldn't be happier with my purchase.",
+      name: "Chris P.",
+      avatar: "/ChrisP.png",
+      message:
+        "If you're looking for a dealership with a reputation built on trust, look no further. They've earned their stellar reputation, and I couldn't be happier with my purchase.",
     },
   ];
 
@@ -83,8 +88,12 @@ export default function Testimonials() {
               />
             </div>
             <div className="text-center max-w-xs m-2">
-              <p className="text-white mt-2 h-24 overflow-hidden">{testimonial.message}</p>
-              <p className="text-secondary font-semibold mt-2 h-10 overflow-hidden">{testimonial.name}</p>
+              <p className="text-white mt-2 h-24 overflow-hidden">
+                {testimonial.message}
+              </p>
+              <p className="text-secondary font-semibold mt-2 h-10 overflow-hidden">
+                {testimonial.name}
+              </p>
             </div>
           </motion.div>
         ))}

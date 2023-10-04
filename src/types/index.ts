@@ -8,12 +8,12 @@ export interface Make {
 }
 
 export interface Warranty {
-  standard: string; 
+  standard: string;
   motor: {
     price?: number;
   };
   transmission: {
-    price?: number; 
+    price?: number;
   };
 }
 
@@ -78,10 +78,3 @@ export interface CarsPagePayload {
 export interface HomePagePayload {
   cars?: ShortCar[];
 }
-
-
-
-
-
-
-

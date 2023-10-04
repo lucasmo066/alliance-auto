@@ -7,7 +7,6 @@ interface CarsListProps {
 }
 
 export default function CarsList({ cars }: CarsListProps) {
-  
   // Sort the cars array to move sold cars to the end
   const sortedCars = cars.sort((a, b) => {
     if (a.sold && !b.sold) return 1; // Move sold cars to the end
@@ -23,5 +22,5 @@ export default function CarsList({ cars }: CarsListProps) {
         </Link>
       ))}
     </div>
-  )
+  );
 }

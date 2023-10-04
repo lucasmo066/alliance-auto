@@ -19,7 +19,6 @@ import { media } from "sanity-plugin-media";
 import make from "~/schemas/singletons/make";
 import car from "~/schemas/documents/car";
 
-
 const title = "Alliance Auto Group";
 
 export const PREVIEWABLE_DOCUMENT_TYPES: string[] = [car.name];

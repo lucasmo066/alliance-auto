@@ -1,10 +1,9 @@
-'use client'
+"use client";
 import React from "react";
 import { ShortCar } from "~/types";
 import CarsCard from "../cars/CarsCard";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 
 interface NewArrivalsListProps {
   cars: ShortCar[];
@@ -21,16 +20,16 @@ export default function NewArrivalsList({ cars }: NewArrivalsListProps) {
 
   return (
     <>
-    <h2 className="text-5xl font-bold text-center text-accent my-8">New Arrivals</h2>
-    <div className="grid gap-4 p-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {filteredCars.map((car) => (
-        <Link href={`cars/${car.slug}`} key={car.slug}>
-          <CarsCard car={car} />
-        </Link>
-      ))}
-    </div>
+      <h2 className="text-5xl font-bold text-center text-accent my-8">
+        New Arrivals
+      </h2>
+      <div className="grid gap-4 p-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {filteredCars.map((car) => (
+          <Link href={`cars/${car.slug}`} key={car.slug}>
+            <CarsCard car={car} />
+          </Link>
+        ))}
+      </div>
     </>
   );
 }
-
-

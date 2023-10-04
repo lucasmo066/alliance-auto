@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const WhyBuyFromUsSection: React.FC = () => {
   const headingVariants = {
@@ -31,9 +31,13 @@ const WhyBuyFromUsSection: React.FC = () => {
           initial="initial"
           animate="animate"
         >
-          <h2 className="text-xl font-semibold text-secondary">Unmatched Quality, In-House Excellence</h2>
+          <h2 className="text-xl font-semibold text-secondary">
+            Unmatched Quality, In-House Excellence
+          </h2>
           <p className="mt-4 text-white">
-            Experience unmatched quality with our in-house team of excellence-driven mechanics, setting us apart from other dealerships in the area.
+            Experience unmatched quality with our in-house team of
+            excellence-driven mechanics, setting us apart from other dealerships
+            in the area.
           </p>
         </motion.div>
         <motion.div
@@ -42,9 +46,12 @@ const WhyBuyFromUsSection: React.FC = () => {
           initial="initial"
           animate="animate"
         >
-          <h2 className="text-xl font-semibold text-secondary">Quality Cars, Transparent Deals</h2>
+          <h2 className="text-xl font-semibold text-secondary">
+            Quality Cars, Transparent Deals
+          </h2>
           <p className="mt-4 text-white">
-            Our commitment to quality cars goes hand in hand with transparent and trustworthy deals.
+            Our commitment to quality cars goes hand in hand with transparent
+            and trustworthy deals.
           </p>
         </motion.div>
         <motion.div
@@ -53,9 +60,12 @@ const WhyBuyFromUsSection: React.FC = () => {
           initial="initial"
           animate="animate"
         >
-          <h2 className="text-xl font-semibold text-secondary">Upgrade with Ease, Trade with Confidence</h2>
+          <h2 className="text-xl font-semibold text-secondary">
+            Upgrade with Ease, Trade with Confidence
+          </h2>
           <p className="mt-4 text-white">
-            Upgrade your vehicle with ease and trade with confidence through our exceptional trade-in and sell-to-us program.
+            Upgrade your vehicle with ease and trade with confidence through our
+            exceptional trade-in and sell-to-us program.
           </p>
         </motion.div>
         <motion.div
@@ -64,9 +74,12 @@ const WhyBuyFromUsSection: React.FC = () => {
           initial="initial"
           animate="animate"
         >
-          <h2 className="text-xl font-semibold text-secondary">Peace of Mind, Included Free</h2>
+          <h2 className="text-xl font-semibold text-secondary">
+            Peace of Mind, Included Free
+          </h2>
           <p className="mt-4 text-white">
-            Enjoy peace of mind with our comprehensive warranty coverage, included free for the first 30 days.
+            Enjoy peace of mind with our comprehensive warranty coverage,
+            included free for the first 30 days.
           </p>
         </motion.div>
       </div>
