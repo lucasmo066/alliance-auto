@@ -6,7 +6,7 @@ import type { HomePagePayload, ShortCar } from "~/types";
 import { HomePage } from "~/components/pages/home/HomePage";
 
 
-export default function PreviewMembers({ cars: initialData }: HomePagePayload) {
+export default function PreviewHome({ cars: initialData }: HomePagePayload) {
   const [data] = useLiveQuery<HomePagePayload | null>(initialData, getAllCars);
 
   if (!data) {
