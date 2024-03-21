@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
+import avatarRebeccaJ from '/public/rebeccaJ.png'; // Adjust the path as necessary
+import avatarCharlieH from '/public/charlieH.png';
+import avatarJoaoP from '/public/JoaoP.png';
+import avatarKimmyV from '/public/KimmyV.png';
+import avatarChrisP from '/public/ChrisP.png';
+
 interface Testimonial {
   id: number;
   name: string;
@@ -17,35 +23,35 @@ export default function Testimonials() {
     {
       id: 1,
       name: "Rebecca J.",
-      avatar: "/rebeccaJ.png",
+      avatar: avatarRebeccaJ.src,
       message:
         "A seamless car-buying experience. Their commitment to providing value and quality sets them apart from the rest.",
     },
     {
       id: 2,
       name: "Charlie H.",
-      avatar: "/charlieH.png",
+      avatar: avatarCharlieH.src,
       message:
         "I appreciate the dedication to quality and trustworthiness. This dealership goes above and beyond to ensure customer satisfaction.",
     },
     {
       id: 3,
       name: "João P.",
-      avatar: "/JoaoP.png",
+      avatar: avatarJoaoP.src,
       message:
         "Transparency is key for me when buying a car. I found it here! No hidden fees or surprises. I knew exactly what I was getting, and that's why I keep coming back.",
     },
     {
       id: 4,
       name: "Kimmy V.",
-      avatar: "/KimmyV.png",
+      avatar: avatarKimmyV.src,
       message:
-        "The free 30-day warranty is a game-changer. It gave me peace of mind knowing that if anything happened, I was covered. It's a sign of their commitment to customer satisfaction.",
+        "The free 30-day warranty is a game-changer. It gave me peace of mind knowing that if anything happened, I was covered.",
     },
     {
       id: 5,
       name: "Chris P.",
-      avatar: "/ChrisP.png",
+      avatar: avatarChrisP.src,
       message:
         "If you're looking for a dealership with a reputation built on trust, look no further. They've earned their stellar reputation, and I couldn't be happier with my purchase.",
     },

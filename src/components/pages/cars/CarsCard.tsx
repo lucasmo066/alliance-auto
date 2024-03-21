@@ -24,6 +24,12 @@ export default function CarsCard({ car }: CarsCardProps) {
       e.preventDefault();
     }
   };
+  const optimizedImageUrl = urlForImage(car.mainImage)
+  .width(500)  // Adjust width as needed
+  .height(500) // Adjust height as needed
+  .auto('format') // Automatically choose the best format
+  .quality(75) // Adjust quality as needed, lower could mean more compression
+  .url();
 
   return (
     <motion.div
@@ -34,13 +40,13 @@ export default function CarsCard({ car }: CarsCardProps) {
       whileHover={{ scale: 1.03, transition: { duration: 0.2 } }} // Shine effect on hover
     >
       <div className="flex items-center justify-center mb-4 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600">
-        <Image
-          src={urlForImage(car.mainImage).url()!}
-          alt={car.name}
-          width={500}
-          height={500}
-          className="rounded"
-        />
+      <Image
+        src={optimizedImageUrl} 
+        alt={car.name}
+        width={500}
+        height={500}
+        className="rounded"
+      />
       </div>
       <div className="-mt-4 flex flex-col items-center justify-center">
         <h2 className="mt-5 text-3xl font-bold tracking-tight text-white">
