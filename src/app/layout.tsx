@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 
 const mulish = Mulish({ weight: "400", subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mulish.className}>{children}</body>
+      <Analytics />
     </html>
   );
 }
