@@ -53,7 +53,7 @@ const Hero = () => {
                 opacity: 1,
                 transition: {
                   duration: 0.7,
-                  delay: 1.2, // Further delay for subsequent content
+                  delay: 1.2, 
                 },
               },
               hidden: { opacity: 0 },

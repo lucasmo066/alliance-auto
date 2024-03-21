@@ -24,21 +24,8 @@ const Footer: React.FC = () => {
           Alliance Group Autobrokers. <br /> Providing trustworthy car sales
           since 2006
         </p>
-        <p>Copyright © 2023 - Built by <a className="text-orange-500 shadow-sm shadow-orange-800 hover:text-orange-300" href="/">Sunset Digital</a> - All right reserved</p>
+        <p>Copyright © 2023 - Built by <a className="text-orange-500 shadow-sm shadow-orange-800 hover:text-orange-300" href="/">Lucas Pequeno</a> - All right reserved</p>
       </aside>
-      <p className="font-bold -mb-6">
-        Receive updates when we post new cars and deals!
-      </p>
-      <div className="relative">
-        <input
-          type="text"
-          placeholder="email"
-          className="input input-bordered w-full pr-16"
-        />
-        <button className="btn btn-error absolute top-0 right-0 rounded-l-none">
-          Subscribe
-        </button>
-      </div>
     </motion.footer>
   );
 };
