@@ -21,9 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={mulish.className}>{children}</body>
-      <Analytics />
-      <SpeedInsights />
+      <body className={mulish.className}>
+        {children}
+       <Analytics />
+        <SpeedInsights />
+      </body>
+ 
     </html>
   );
 }
