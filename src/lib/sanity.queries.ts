@@ -5,16 +5,16 @@ export const getAllCars = groq`
         _id,
         name,
         date,
+        "slug": slug.current,
         make,
         model,
         year,
         mileage,
-        transmission,
         cost,
+        transmission,
+        "mainImage": images[0],
         sold,
         warranty,
-        "mainImage": images[0],
-        "slug": slug.current,
     }
 `;
 

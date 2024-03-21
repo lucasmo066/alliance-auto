@@ -36,7 +36,7 @@ const SellYourCarSection = () => {
             Sell or qualify to trade-in your car with Alliance Group Autobrokers
             in three easy steps!
           </p>
-          <PrimaryButton href="/tradein" label="Learn More" />
+          <PrimaryButton href="/tradein" label="Apply Today!" />
         </motion.div>
       </div>
     </section>

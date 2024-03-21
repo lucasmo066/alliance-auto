@@ -75,6 +75,7 @@ export interface CarsPagePayload {
   cars?: ShortCar[];
 }
 
+
 export interface HomePagePayload {
   cars?: ShortCar[];
 }

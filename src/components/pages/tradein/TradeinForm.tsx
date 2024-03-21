@@ -352,7 +352,7 @@ export default function CarInfoForm() {
               <p>Uploaded Files:</p>
               <ul>
                 {acceptedFiles.map((file) => (
-                  <li key={file.path}>{file.path}</li>
+                    <li key={(file as any).path}>{(file as any).path}</li>
                 ))}
               </ul>
             </div>

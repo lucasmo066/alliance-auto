@@ -14,10 +14,9 @@ import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
-interface HomePageProps {
+export interface HomePageProps {
     cars: ShortCar[]; 
   }
-
 
 export function HomePage({ cars }: HomePageProps) {
 if (!cars) return null;
@@ -25,7 +24,7 @@ if (!cars) return null;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Hero />
-      <NewArrivalsList cars={cars as ShortCar[]} />
+      <NewArrivalsList cars={cars} />
       <WhyBuyFromUsSection />
       <Testimonials />
       <SellYourCarSection />

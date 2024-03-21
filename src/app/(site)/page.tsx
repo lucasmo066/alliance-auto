@@ -21,5 +21,5 @@ export default async function HomeRoute() {
     notFound();
   }
 
-  return preview ? <PreviewHomePage cars={data} /> : <HomePage cars={data} />;
+  return preview ? <PreviewHomePage cars={data.cars} /> : <HomePage cars={data.cars} />;
 }
