@@ -26,7 +26,7 @@ const SellYourCarSection = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-2/3 text-center md:text-center"
         >
-          <h2 className="text-3xl md:text-3xl font-semibold mb-4 text-black">
+          <h2 className="text-xl md:text-3xl font-semibold mb-4 text-black">
             Looking to Sell Your Car?
           </h2>
           <p className="text-md md:text-lg mb-6 text-black">
