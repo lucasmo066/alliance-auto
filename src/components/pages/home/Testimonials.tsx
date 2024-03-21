@@ -6,7 +6,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 import avatarRebeccaJ from '/public/rebeccaJ.png'; // Adjust the path as necessary
-import avatarCharlieH from '/public/charlieH.png';
+import avatarCharlieH from '/public/CharlieH.png';
 import avatarJoaoP from '/public/JoaoP.png';
 import avatarKimmyV from '/public/KimmyV.png';
 import avatarChrisP from '/public/ChrisP.png';
