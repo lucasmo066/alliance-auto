@@ -1,4 +1,4 @@
-import { HomePagePayload } from "~/types";
+import { HomePagePayload, ShortCar } from "~/types";
 import { carsBySlugQuery, getAllCars } from "~/lib/sanity.queries";
 import { getClient } from "~/lib/sanity.client";
 import { draftMode } from "next/headers";
@@ -15,11 +15,11 @@ export default async function HomeRoute() {
   const client = getClient(preview);
   const data = (await client.fetch(getAllCars, {
     next: { revalidate: 10 },
-  })) as HomePagePayload;
+  })) as ShortCar[];
 
   if (!data && !preview) {
     notFound();
   }
 
-  return preview ? <PreviewHomePage cars={data.cars} /> : <HomePage cars={data.cars} />;
+  return preview ? <PreviewHomePage cars={data} /> : <HomePage cars={data} />;
 }
