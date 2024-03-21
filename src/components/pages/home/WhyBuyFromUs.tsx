@@ -15,7 +15,7 @@ const WhyBuyFromUsSection: React.FC = () => {
   };
 
   return (
-    <section className="text-center py-10">
+    <section className="text-center py-10" id="whybuy" >
       <motion.h1
         className="text-5xl font-bold text-accent"
         variants={headingVariants}
@@ -24,7 +24,7 @@ const WhyBuyFromUsSection: React.FC = () => {
       >
         Why Buy From Us?
       </motion.h1>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >
         <motion.div
           className="bg-neutral p-6 rounded-lg shadow-lg"
           variants={cardVariants}

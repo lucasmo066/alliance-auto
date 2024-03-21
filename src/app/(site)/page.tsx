@@ -14,7 +14,7 @@ export default async function HomeRoute() {
   const preview = draftMode().isEnabled ? { token: readToken! } : undefined;
   const client = getClient(preview);
   const data = (await client.fetch(getAllCars, {
-    next: { revalidate: 10 },
+    next: { revalidate: 1000 },
   })) as ShortCar[];
 
   if (!data && !preview) {

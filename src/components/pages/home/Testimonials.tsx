@@ -58,7 +58,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="w-full overflow-hidden pb-10">
+    <div className="w-full overflow-hidden pb-10" id="testimonials" >
       <motion.h2
         className="text-3xl font-semibold text-center text-accent"
         initial={{ opacity: 0, y: -20 }}
@@ -75,7 +75,7 @@ export default function Testimonials() {
       >
         Hear It From Our Customers!
       </motion.h3>
-      <Marquee direction="left" speed={40}>
+      <Marquee direction="left" speed={45}>
         {testimonials.map((testimonial) => (
           <motion.div
             key={testimonial.id}

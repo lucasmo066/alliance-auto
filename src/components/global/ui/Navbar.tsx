@@ -55,15 +55,15 @@ const Navbar = () => {
               <a>Why Buy From Us?</a>
               <ul className="p-2">
                 <li>
-                  <a>Testimonials</a>
+                  <a href="#testimonials">Testimonials</a>
                 </li>
                 <li>
-                  <a>Our Values</a>
+                  <a href="#whybuy">Our Values</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Contact Us</a>
+              <a href="#contact">Contact Us</a>
             </li>
             <li>
               <a href="/tradein">Trade-in</a>
@@ -95,10 +95,10 @@ const Navbar = () => {
               <summary>Why Buy From Us?</summary>
               <ul className="p-2">
                 <li>
-                  <a>Testimonials</a>
+                  <a href="#testimonials">Testimonials</a>
                 </li>
                 <li>
-                  <a>Our Values</a>
+                  <a href="#whybuy">Our Values</a>
                 </li>
               </ul>
             </details>
@@ -107,7 +107,7 @@ const Navbar = () => {
             <a href="#contact">Contact Us</a>
           </li>
           <li>
-            <a href="#contact">Trade-in</a>
+            <a href="/tradein">Trade-in</a>
           </li>
         </motion.ul>
       </div>

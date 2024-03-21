@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
@@ -25,18 +26,20 @@ const Hero = () => {
   return (
     <div
       className="hero min-h-screen"
-      style={{ backgroundImage: "url(/hero.jpg)" }}
+      style={{ backgroundImage: "url(/hero.webP)" }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md mx-auto">
-          <Image
-            src="/2.png"
-            width={200}
-            height={200}
-            alt="logo"
-            className="mb-6 translate-x-2/3"
-          />
+          {/* Logo Image Wrapper */}
+          <div className="mb-6 hidden md:block" style={{ transform: 'translateX(27%)' }}>
+            <Image
+              src="/2.png"
+              width={200}
+              height={200}
+              alt="logo"
+            />
+          </div>
           <motion.h1
             initial="hidden"
             animate={controls}

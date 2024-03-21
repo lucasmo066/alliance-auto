@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Alliance Group Autobrokers",
   description:
     "Marietta, Georgia's premier destination for exceptional used cars.",
-  icons: "/favicon.ico",
+  icons: "/favicon.png",
 };
 
 export default function RootLayout({
